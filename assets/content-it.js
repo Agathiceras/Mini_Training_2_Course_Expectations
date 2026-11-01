@@ -92,15 +92,15 @@ const CONTENT = {
    ${co('co-ok','✅',`<p><strong>E mentre il team valuta le opzioni, tu hai ancora la lezione.</strong> Un insegnamento flessibile e centrato sullo studente è la parte che dipende interamente da te — il Modulo 2 ti mostra come fare.</p>`)}
   `},
   {t:'🛟 Se esiste già una richiesta di rimborso', html:`
-   <div class="card"><p>Tutto quello che hai letto finora serve a intercettare il problema presto. Ma forse stai aprendo questo training perché una famiglia ha <strong>già</strong> chiesto un rimborso. Le regole qui sotto valgono qualunque sia il motivo — leggile per prime, poi usa il resto del training per capire cosa ha portato a questa situazione e cosa puoi ancora fare in lezione.</p></div>
-   ${co('co-idea','💡',`<p><strong>La richiesta viene creata dal Client Service, non da te</strong> — quella parte non dipende da te. Quello che resta tuo è tutto ciò che succede in lezione da qui in avanti, e non è poco.</p>`)}
+   <div class="card"><p>Tutto quello che hai letto finora serve a intercettare il problema presto. Ma forse stai aprendo questo training perché una famiglia ha <strong>già</strong> chiesto un rimborso. Le regole qui sotto valgono qualunque sia il motivo — leggile per prime, poi usa il resto del training per capire cosa ha portato a questa situazione e cosa puoi ancora fare a lezione.</p></div>
+   ${co('co-idea','💡',`<p><strong>La richiesta viene creata dal Client Service, non da te</strong> — quella parte non dipende da te. Quello che resta tuo è tutto ciò che succede a lezione da qui in avanti, e non è poco.</p>`)}
    ${co('co-danger','🤐',`<p><strong>Non dire nulla sulla richiesta</strong> — né al bambino né alla famiglia — a meno che il Client Service non ti chieda esplicitamente di dire qualcosa di specifico. Ora il tuo compito è la lezione, non la conversazione.</p>`)}
   `},
   {t:'🎯 La tua prossima lezione è il tentativo di recupero', html:`
    <div class="card"><p>Potresti non avere altre occasioni per cambiare le cose. Considera la prossima lezione con questo bambino come il momento decisivo.</p></div>
    ${iconGrid([
-     {ic:'🙋', html:`<strong>Dagli un vero spazio da protagonista.</strong> Non una domanda di circostanza — un momento autentico in cui si sente visto e ci riesce.`},
-     {ic:'🏆', html:`<strong>Prevedi un successo presto e ben visibile.</strong> Deve uscire dalla lezione sentendosi capace, non indietro.`},
+     {ic:'🙋', html:`<strong>Dagli un vero spazio da protagonista.</strong> Non una domanda di circostanza — un momento autentico in cui si senta visto e ci riesca.`},
+     {ic:'🏆', html:`<strong>Prevedi un successo rapido e ben visibile.</strong> Deve uscire dalla lezione sentendosi capace, non indietro.`},
      {ic:'👀', html:`<strong>Attenzione specifica</strong> — fallo sentire notato per qualcosa di concreto, non lodato in modo generico.`},
      {ic:'🤐', html:`<strong>Nessun accenno alla richiesta</strong> — anche se è il bambino a tirarla fuori, sposta il discorso con gentilezza e continua la lezione.`}
    ])}
@@ -108,7 +108,7 @@ const CONTENT = {
   {t:'📮 Avvisa subito, e conosci l’unica frase sicura', html:`
    <div class="card"><p>Puoi scoprire che esiste una richiesta dai commenti del Client Service sul profilo del bambino in BO — non c’è un sistema automatico che ti avvisa. Una volta che lo sai, quello che hai osservato nelle tue lezioni è un’informazione che il Client Service non può avere in nessun altro modo.</p></div>
    ${numlist([
-     'Lascia un commento in BO il giorno stesso con esattamente ciò che hai visto — date e dettagli concreti, non impressioni',
+     'Lascia un commento in BO il giorno stesso riportando esattamente ciò che hai visto — date e dettagli concreti, non impressioni',
      'Riporta le parole testuali della famiglia, se le hai',
      'Coinvolgi il tuo Team Leader il giorno stesso',
      'Non confermare mai che un rimborso è stato approvato e non parlare mai di importi'
@@ -129,7 +129,7 @@ const CONTENT = {
    <div class="card"><p>«Questo corso non mi piace» può voler dire tre cose diverse — e ognuna richiede una mossa leggermente diversa. Impara a distinguerle.</p></div>
    ${patternCards([
      {ic:'🎯', title:'Non è quello per cui sono venuto', desc:'«Pensavo che avremmo creato videogiochi.» «Possiamo fare qualcos’altro?»', note:'L’aspettativa era diversa dal corso. <strong>La flessibilità può colmare lo scarto — e un altro corso potrebbe essere più adatto.</strong>'},
-     {ic:'😒', title:'Non gli piacciono i contenuti', desc:'Arriva senza entusiasmo, fa gli esercizi «perché deve», dice che l’argomento è noioso', note:'L’argomento, o il modo in cui sono presentati gli esercizi, non gli parla. <strong>Offri delle scelte all’interno dell’obiettivo, e segnalalo.</strong>'},
+     {ic:'😒', title:'Non gli piacciono i contenuti', desc:'Arriva senza entusiasmo, fa gli esercizi «perché deve», dice che l’argomento è noioso', note:'L’argomento, o il modo in cui sono presentati gli esercizi, non lo appassiona. <strong>Offri delle scelte all’interno dell’obiettivo, e segnalalo.</strong>'},
      {ic:'⚖️', title:'Il livello non sembra quello giusto', desc:'Finisce in pochi minuti: «Questo lo so già.» Oppure: «Non capisco niente.»', note:'Spesso viene segnalato come qualcosa che non piace. <strong>Adatta subito, e segnalalo per una lezione di valutazione del livello.</strong>'}
    ],3)}
   `},
@@ -172,7 +172,7 @@ const CONTENT = {
    <p style="font-size:13.5px;line-height:1.75"><strong>Studente:</strong> [nome] · <strong>Corso / livello:</strong> [es. Illustrazione, livello 1] · <strong>Lezione:</strong> [M1L2 — data]<br>
    <strong>Cosa ho osservato:</strong> [2–3 righe: il segnale, il momento, le parole dello studente]<br>
    <strong>Cosa penso ci sia dietro:</strong> ☐ non è quello che si aspettava &nbsp; ☐ non gli piacciono i contenuti &nbsp; ☐ il livello non sembra quello giusto<br>
-   <strong>Cosa ho già provato in lezione:</strong> [es. le ho fatto scegliere il tema del personaggio]<br>
+   <strong>Cosa ho già provato a lezione:</strong> [es. le ho fatto scegliere il tema del personaggio]<br>
    <strong>Cosa potrebbe aiutare — io lo raccomando, voi decidete:</strong> ☐ una lezione motivazionale &nbsp; ☐ una lezione di valutazione del livello o una sessione di orientamento &nbsp; ☐ un altro corso</p></div>
    <div class="sim-embed"><div class="sim-embed-inner"><span class="sim-embed-tag">🖥️ BO — Segnala un caso</span><iframe src="Simulacion_BO_Evaluate.html" title="BO — Segnala un caso" loading="lazy"></iframe></div></div>
    ${co('co-star','🌱',`<p><strong>Perché funziona:</strong> il tuo Team Leader e il Client Service possono agire solo su ciò che sanno. La segnalazione è l’unico passaggio di tutto questo processo che solo tu puoi fare — ed è quello che decide quante opzioni restano.</p>`)}
@@ -184,8 +184,8 @@ const CONTENT = {
      ['Proporre di tua iniziativa un altro corso, un cambio di livello o un rimborso','Difendere il corso: <em>«più avanti migliora»</em>','Promettere una lezione o un cambiamento','Dire <em>«il corso non gli è piaciuto»</em> — suona come un fallimento']
    )}
    <div class="card" style="background:var(--surface2)"><h4>📨 Quando il tuo Team Leader conferma una raccomandazione — presentala come un’opportunità</h4>
-   <p style="font-size:13.5px;line-height:1.75"><em>«Buongiorno [nome del genitore], sono [il tuo nome], il tutor di [studente]. Ho notato che [studente] ha molto potenziale, ma nelle prime lezioni ho avuto l’impressione che l’impostazione di questo corso non sia proprio quella che aveva in mente — [es. mi ha detto che gli piacerebbe creare videogiochi, non solo scrivere codice]. Ci tengo che [studente] si diverta e sfrutti al meglio il suo tempo in Kodland, quindi insieme al nostro team vorremmo valutare se [un altro corso] possa essere più adatto. Ha qualche minuto questa settimana per parlarne insieme?»</em></p></div>
-   ${co('co-idea','💡',`<p><strong>Di’</strong> «abbiamo trovato qualcosa che potrebbe piacergli ancora di più» — <strong>mai</strong> «il corso non gli è piaciuto».</p>`)}
+   <p style="font-size:13.5px;line-height:1.75"><em>«Buongiorno [nome del genitore], sono [il tuo nome], il tutor di [studente]. Ho notato che [studente] ha un grande potenziale, ma nelle prime lezioni ho avuto l’impressione che l’impostazione di questo corso non sia proprio quella che aveva in mente — [es. mi ha detto che gli piacerebbe creare videogiochi, non solo scrivere codice]. Ci tengo che [studente] si diverta e sfrutti al meglio il suo tempo in Kodland, quindi insieme al nostro team vorremmo valutare se [un altro corso] possa essere più adatto. Ha qualche minuto questa settimana per parlarne insieme?»</em></p></div>
+   ${co('co-idea','💡',`<p><strong>Dì</strong> «abbiamo trovato qualcosa che potrebbe piacergli ancora di più» — <strong>mai</strong> «il corso non gli è piaciuto».</p>`)}
   `}
  ],
  ix:{
@@ -195,7 +195,7 @@ const CONTENT = {
    {type:'sort', prompt:'Che forma di disallineamento è questa?', card:`«Pensavo che avremmo creato videogiochi, non solo scritto codice.»`, zones:[{label:'🎯 Non è quello per cui sono venuto', fb:'Corretto — l’aspettativa era diversa dal corso. La flessibilità può colmare parte dello scarto, e una segnalazione tiene aperte le altre opzioni.'},{label:'😒 Non gli piacciono i contenuti', fb:'Non proprio — questo studente aveva in mente una cosa precisa da fare. È uno scarto del tipo «non è quello per cui sono venuto».'},{label:'⚖️ Il livello non sembra quello giusto', fb:'Non proprio — qui non si parla di difficoltà, ma di ciò che si aspettava di creare.'}], correctZone:0},
    {type:'sort', prompt:'Che forma di disallineamento è questa?', card:`«Era tutto facilissimo — questo lo so già.»`, zones:[{label:'🎯 Non è quello per cui sono venuto', fb:'Non proprio — questo studente parla di difficoltà, non dell’argomento.'},{label:'😒 Non gli piacciono i contenuti', fb:'Non proprio — il problema è il livello, anche se sembra noia per i contenuti.'},{label:'⚖️ Il livello non sembra quello giusto', fb:'Corretto — sembra che non gli piaccia, ma è il livello. Adatta subito, e segnalalo per una lezione di valutazione del livello.'}], correctZone:2},
    {type:'sort', prompt:'Che forma di disallineamento è questa?', card:`A ogni lezione fa gli esercizi solo perché deve, risponde «boh» e chiede di finire prima.`, zones:[{label:'🎯 Non è quello per cui sono venuto', fb:'Non proprio — non ha detto cosa si aspettava. Il quadro indica uno scarso interesse per i contenuti in sé.'},{label:'😒 Non gli piacciono i contenuti', fb:'Corretto — i contenuti, o il modo in cui sono presentati, non le parlano. Offri delle scelte all’interno dell’obiettivo e segnalalo.'},{label:'⚖️ Il livello non sembra quello giusto', fb:'Non proprio — niente indica un problema di difficoltà; il segnale è lo scarso interesse.'}], correctZone:1},
-   {type:'choice', prompt:`Durante la diagnosi chiedi «Cosa ti aspettavi di imparare?» e lo studente risponde: «Disegnare anime — non questo.» Qual è il passo migliore?`, opts:[`Spiegare che gli anime arrivano più avanti nel corso e proseguire esattamente come previsto`,`Portare il suo interesse nella lezione di oggi dove possibile, e segnalarlo in BO il giorno stesso`,`Aspettare altre due lezioni per vedere se gli passa`], correct:1, fb:`Adatta subito in lezione ciò che puoi, e segnalalo il giorno stesso così il team ha ancora tutte le opzioni. Aspettare, o difendere il programma, fa sprecare il momento utile.`},
+   {type:'choice', prompt:`Durante la diagnosi chiedi «Cosa ti aspettavi di imparare?» e lo studente risponde: «Disegnare anime — non questo.» Qual è il passo migliore?`, opts:[`Spiegare che gli anime arrivano più avanti nel corso e proseguire esattamente come previsto`,`Portare il suo interesse nella lezione di oggi dove possibile, e segnalarlo in BO il giorno stesso`,`Aspettare altre due lezioni per vedere se gli passa`], correct:1, fb:`Adatta subito a lezione ciò che puoi, e segnalalo il giorno stesso così il team ha ancora tutte le opzioni. Aspettare, o difendere il programma, fa sprecare il momento utile.`},
    {type:'sort', prompt:'In quale colore del semaforo rientra questa situazione?', card:`Due lezioni di fila: risposte a monosillabi e richieste di finire prima.`, zones:[{label:'🟢 Verde', fb:'Non proprio — due lezioni di risposte a monosillabi e di voglia di andarsene prima non significano «tutto bene».'},{label:'🟡 Giallo', fb:'Corretto — prendi nota, prova un cambiamento flessibile e avvisa il tuo Team Leader la settimana stessa. Non aspettare il rosso.'},{label:'🔴 Rosso', fb:'Non ancora — il rosso significa rifiuto, un rifiuto dichiarato del corso o un genitore che scrive. Ma due gialli di fila significano già: avvisa il tuo Team Leader questa settimana.'}], correctZone:1},
   ]
  }
@@ -208,8 +208,8 @@ const CONTENT = {
   {t:'🎯 La regola: mantieni l’obiettivo, adatta il percorso', html:`
    <div class="card"><p>Non devi scegliere tra «seguire il manuale» e «lasciargli fare quello che vuole». Il manuale ti dice <strong>a cosa serve</strong> la lezione. Quasi tutto il resto si può adattare.</p></div>
    <div class="two-col">
-     <div class="card"><h4>🔒 Resta uguale</h4><ul><li>L’obiettivo di apprendimento e le competenze della lezione</li><li>I risultati attesi indicati nel manuale</li><li>La struttura della lezione (riscaldamento, pratica, chiusura)</li></ul></div>
-     <div class="card"><h4>🎛️ Si può adattare</h4><ul><li>Il tema, il personaggio, la storia</li><li>L’argomento del progetto</li><li>L’ordine dei passaggi</li><li>L’esempio che usi e la difficoltà dell’esercizio</li></ul></div>
+     <div class="card"><h4>🔒 Restano uguali</h4><ul><li>L’obiettivo di apprendimento e le competenze della lezione</li><li>I risultati attesi indicati nel manuale</li><li>La struttura della lezione (riscaldamento, pratica, chiusura)</li></ul></div>
+     <div class="card"><h4>🎛️ Si possono adattare</h4><ul><li>Il tema, il personaggio, la storia</li><li>L’argomento del progetto</li><li>L’ordine dei passaggi</li><li>L’esempio che usi e la difficoltà dell’esercizio</li></ul></div>
    </div>
    ${co('co-idea','🧠',`<p><strong>Perché funziona.</strong> Nel noto modello ARCS di John Keller (1987), uno studente motivato ha bisogno di quattro cose: <strong>A</strong>ttention (attenzione), <strong>R</strong>elevance (rilevanza), <strong>C</strong>onfidence (fiducia in sé) e <strong>S</strong>atisfaction (soddisfazione). Uno studente che dice «non è quello che volevo» non trova la <em>rilevanza</em> — e collegare la lezione a ciò che gli sta già a cuore è esattamente il modo per restituirgliela.</p>`)}
   `},
@@ -228,7 +228,7 @@ const CONTENT = {
       tips:[
        {ic:'🃏', html:`<strong>Scegli una carta.</strong> <em>«Oggi possiamo fare un drago, un robot o un gatto. Quale scegli?»</em>`},
        {ic:'🏷️', html:`<strong>Lascia che gli dia un nome e lo senta suo.</strong> <em>«Come si chiama il tuo personaggio?»</em> — poi usa quel nome mentre spieghi.`},
-       {ic:'✅', html:`<strong>Di’ sì al tema, mantieni la competenza.</strong> <em>«Sì, il drago può avere le ombre — le ombre sono il segreto di oggi.»</em>`},
+       {ic:'✅', html:`<strong>Dì sì al tema, mantieni la competenza.</strong> <em>«Sì, il drago può avere le ombre — le ombre sono il segreto di oggi.»</em>`},
        {ic:'🎉', html:`<strong>Festeggia la sua scelta.</strong> Il momento in cui la sua idea compare sullo schermo è il momento in cui sente che la lezione è sua.`}
       ]},
      {ic:'🧑', title:'9–11 anni',
@@ -260,10 +260,10 @@ const CONTENT = {
    <div class="card"><h4>🎁 Cosa possono organizzare il tuo Team Leader e il Client Service — tu raccomandi, loro decidono</h4></div>
    ${iconGrid([
      {ic:'💬', html:`<strong>Una lezione motivazionale.</strong> Una conversazione o una lezione pensata per ricollegare lo studente al motivo per cui si è iscritto.`},
-     {ic:'🎚️', html:`<strong>Una lezione di valutazione del livello o una sessione di orientamento.</strong> Verifica se il corso e il livello sono davvero adatti — e cosa lo sarebbe di più.`},
+     {ic:'🎚️', html:`<strong>Una lezione di valutazione del livello o una sessione di orientamento.</strong> Serve a verificare se il corso e il livello sono davvero adatti — e cosa lo sarebbe di più.`},
      {ic:'🔄', html:`<strong>Un altro corso Kodland.</strong> Spesso è il recupero migliore: lo studente fa qualcosa che ama e resta in Kodland.`}
    ])}
-   ${co('co-danger','⛔',`<p><strong>Tu raccomandi in BO — non prometti mai.</strong> Né «ti sposto in un altro corso», né «non è possibile». Sono entrambe decisioni che non spettano a te.</p>`)}
+   ${co('co-danger','⛔',`<p><strong>Raccomanda in BO — non promettere mai.</strong> Né «ti sposto in un altro corso», né «non è possibile». Sono entrambe decisioni che non spettano a te.</p>`)}
    <div class="card" style="background:var(--surface2)"><h4>🗣️ Cosa puoi dire allo studente</h4>
    <p style="font-size:13.5px;line-height:1.75"><em>«Mi fa davvero piacere che tu mi abbia detto cosa ti piacerebbe creare. Per oggi usiamo la tua idea nella lezione. E chiederò al mio team cos’altro possiamo fare per te.»</em></p></div>
    ${doavoid(
@@ -301,9 +301,9 @@ const CONTENT = {
   `},
   {t:'🌱 In ogni lezione', html:`
    ${numlist([
-     'Nelle prime due lezioni faccio la diagnosi rapida: cosa sa, cosa si aspetta, cosa gli è sembrato facile o difficile, e un breve esercizio individuale',
+     'Nelle prime due lezioni faccio la diagnosi rapida: cosa sa, cosa si aspetta, cosa gli è sembrato facile o difficile, e faccio svolgere un breve esercizio individuale',
      'Dopo ogni lezione la classifico come verde, gialla o rossa — e dopo due lezioni gialle di fila avviso il mio Team Leader la settimana stessa',
-     'Ogni 2–3 lezioni faccio una domanda per fare il punto: la parte più bella, cosa cambierebbe, quanto è difficile da 1 a 5, cosa vorrebbe creare',
+     'Ogni 2–3 lezioni faccio una domanda per fare il punto: qual è stata la parte più bella, cosa cambierebbe, quanto è difficile da 1 a 5, cosa vorrebbe creare',
      'Subito dopo la lezione scrivo 2–3 righe: il segnale, il momento e le parole dello studente',
      'Segnalo un possibile disallineamento in BO il giorno stesso — anche quando non sono sicuro; una segnalazione inutile non costa nulla',
      'Tengo fisso l’obiettivo di apprendimento e adatto il tema, il progetto, il personaggio o l’ordine dei passaggi',

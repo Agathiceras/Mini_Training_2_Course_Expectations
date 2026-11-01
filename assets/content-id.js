@@ -66,7 +66,7 @@ const CONTENT = {
   buildModules(){
     return [
 {id:'intro', numLabel:'Pendahuluan', emoji:'🧩', color:'var(--coral)',
- title:'Mengapa Kamu di Sini',
+ title:'Kenapa Penting Memahaminya',
  desc:'Mengapa “ini bukan yang kami inginkan” adalah salah satu dari sedikit alasan refund yang masih bisa kamu ubah — dan aturan yang berlaku jika permintaan refund sudah masuk.',
  obj:'Memahami mengapa kesenjangan antara kursus dan harapan siswa atau keluarga sering kali bisa diperbaiki, mengapa laporan di hari yang sama sangat penting, dan apa persisnya yang harus (dan tidak boleh) dilakukan jika permintaan refund sudah ada.',
  sections:[
@@ -146,7 +146,7 @@ const CONTENT = {
    ${classifyCard('co-ok','🟢','Datang tepat waktu dan siap · bertanya tentang topiknya · bersemangat saat sesuatu berhasil · ingin menunjukkan kemajuannya · ingat pelajaran sebelumnya.','Teruskan. Jaga hubungan tetap hangat, dan terus perhatikan.')}
    ${classifyCard('co-cute','🟡','Sering terdistraksi · menjawab dengan satu kata (“iya”, “nggak”, “nggak tahu”) · mengerjakan latihan hanya karena kewajiban · tidak ingat pelajaran sebelumnya · minta selesai lebih awal.','Tulis catatan setelah pelajaran dan coba perubahan yang fleksibel (Modul 2). <strong>Dua pelajaran kuning berturut-turut → beri tahu Team Leader-mu di minggu yang sama.</strong> Jangan menunggu merah.')}
    ${classifyCard('co-danger','🔴','Menolak ikut serta · terang-terangan bilang tidak suka · orang tua menulis bahwa anaknya tidak mau datang · dua pelajaran kuning atau lebih tanpa perbaikan · menangis, frustrasi, atau menjadi sulit diatur.','<strong>Laporkan di BO di hari yang sama</strong> dan beri tahu Team Leader-mu.')}
-   <div class="card"><h4>💬 Empat pertanyaan cek — ajukan satu setiap 2–3 pelajaran</h4></div>
+   <div class="card"><h4>Cek dengan 4 pertanyaan ini – ajukan satu setiap 2 - 3 pelajaran</h4></div>
    ${iconGrid([
      {ic:'🌟', html:`<strong>“Bagian paling seru dari kelas hari ini apa?”</strong> Jika dia tidak bisa menyebutkan apa pun, itu sebuah tanda.`},
      {ic:'🔧', html:`<strong>“Ada nggak yang ingin kamu ubah dari pelajaran kita?”</strong> Pertanyaan terbuka yang memberikan informasi berguna tanpa tekanan.`},
@@ -242,7 +242,7 @@ const CONTENT = {
      {ic:'🧑‍🎓', title:'Usia 12+',
       intro:'Siswa yang lebih besar menginginkan relevansi dan rasa hormat. Perlakukan mereka sebagai orang yang mampu, dan bernegosiasilah.',
       tips:[
-       {ic:'🤝', html:`<strong>Negosiasikan arahannya.</strong> <em>“Proyek seperti apa yang menurutmu layak dikerjakan? Yuk, cari versi yang tetap mengajarkan keterampilan hari ini dan jadi milikmu.”</em>`},
+       {ic:'🤝', html:`<strong>Terimakasih karena kamu</strong> <em>berani memberitahu. Nanti saya cek ke tim apakah ada opsi yang sesuai. Sementara itu, hari ini kita coba idemu.</em>`},
        {ic:'🌍', html:`<strong>Tunjukkan di mana keterampilan itu dipakai</strong> — di game, aplikasi, atau desain yang sudah mereka sukai.`},
        {ic:'⚖️', html:`<strong>Jujur soal batasannya.</strong> <em>“Itu di luar kursus ini — aku akan tanya timku apa yang bisa kita lakukan. Untuk hari ini, yuk kita pakai di sini dulu.”</em>`},
        {ic:'📣', html:`<strong>Biarkan mereka menunjukkan hasil kerjanya</strong> kepada grup; teman sebaya sangat berarti di usia ini.`}

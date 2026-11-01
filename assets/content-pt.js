@@ -8,8 +8,8 @@ const CONTENT = {
     logoSub:'Departamento de Desenvolvimento de Tutores',
     heroEyebrow:"🎯 Minitreinamento",
     heroTitle:"Fechando a Lacuna de <span class=\"h-pill\">Expectativas</span>",
-    heroIntro:"Você recebeu este treinamento porque tem alunos que pediram reembolso por o curso não ter atendido às expectativas, não ser o que queriam ou por não gostarem do conteúdo. Aqui, vamos mostrar o que você pode fazer como tutor e como lidar com essas situações.",
-    heroWork:"Faça 4 módulos curtos. Cada verificação de módulo exige 70% ou mais para liberar o próximo. Cerca de 20 a 25 minutos no total.",
+    heroIntro:"Você recebeu este treinamento porque alguns alunos solicitaram reembolso por o curso não ter atendido às suas expectativas, não corresponder ao que procuravam ou por não gostarem do conteúdo. Neste treinamento, vamos mostrar o que você pode fazer como tutor e como lidar com essas situações.",
+    heroWork:"Complete 4 módulos curtos. Acerte pelo menos 70% em cada verificação para liberar o próximo módulo. Levará cerca de 20 a 25 minutos.",
     startBtn:"🚀 Começar o treinamento",
     pathLabel:'Seu caminho de aprendizado',
     devTitle:'Dev: liberar todos os módulos para revisão',
@@ -80,7 +80,7 @@ const CONTENT = {
    ])}
    ${co('co-idea','💡',`<p><strong>Este é um dos poucos motivos de reembolso que ainda podem ser revertidos.</strong> Um aluno que quer algo diferente muitas vezes pode receber algo diferente — dentro da sua aula, por meio de uma aula de nivelamento ou de uma sessão de orientação, ou em outro curso da Kodland em que ele ficará mais feliz.</p>`)}
   `},
-  {t:'⏱️ O segredo é a rapidez — e o seu relato', html:`
+  {t:'⏱️ O segredo está na rapidez e no seu relato', html:`
    <div class="card"><p>Não é você quem decide se um aluno muda de curso ou de nível. Mas o seu relato é o que dá início a essa conversa, e ele só funciona se chegar às pessoas certas <strong>cedo</strong>.</p></div>
    ${stepFlow([
      {ic:'👀', label:'Você percebe a lacuna em uma aula'},
@@ -99,29 +99,29 @@ const CONTENT = {
   {t:'🎯 Sua próxima aula é a tentativa de reverter', html:`
    <div class="card"><p>Talvez você não tenha chance de mudar mais nada. Trate a próxima aula com essa criança como o momento que decide tudo.</p></div>
    ${iconGrid([
-     {ic:'🙋', html:`<strong>Dê à criança um papel de verdade.</strong> Não uma pergunta sem sentido — um momento genuíno em que ela é vista e tem sucesso.`},
+     {ic:'🙋', html:`<strong>Dê espaço para ela falar de verdade.</strong> Não faça uma pergunta só por fazer. Crie um momento genuíno em que ela se sinta valorizada e tenha a oportunidade de acertar.`},
      {ic:'🏆', html:`<strong>Garanta uma conquista visível logo no início.</strong> Ela deve sair da aula se sentindo capaz, não atrasada.`},
      {ic:'👀', html:`<strong>Atenção específica</strong> — faça-a se sentir notada por algo concreto, e não elogiada de forma genérica.`},
      {ic:'🤐', html:`<strong>Nenhuma menção ao pedido</strong> — mesmo que a criança toque no assunto, redirecione com carinho e continue ensinando.`}
    ])}
   `},
   {t:'📮 Avise rápido e conheça a única frase segura', html:`
-   <div class="card"><p>Você pode descobrir que existe um pedido pelos comentários do Client Service no perfil da criança no BO — não há nenhum sistema automático que avise você. Depois que você sabe, o que você viu nas suas aulas é uma informação que o Client Service não tem de nenhuma outra forma.</p></div>
+   <div class="card"><p>Você pode descobrir se há um pedido de reembolso por meio dos comentários do Client Service no perfil do aluno, no BO. Não há nenhum sistema automático que envie esse aviso. Quando ficar sabendo, lembre-se de que as informações que você obteve durante as aulas são algo que o Client Service não tem como conseguir de outra forma.</p></div>
    ${numlist([
      'Deixe um comentário no BO no mesmo dia com exatamente o que você viu — datas e detalhes, não impressões',
      'Inclua as palavras da própria família, literalmente, se você as tiver',
      'Avise seu Team Leader no mesmo dia',
      'Nunca confirme que um reembolso foi aprovado nem comente qualquer valor'
    ])}
-   ${co('co-ok','✅',`<p><strong>A mensagem que é sempre segura:</strong> <em>“O Client Service vai ajudar vocês com isso.”</em> É aí que termina a sua parte da conversa — a partir dali, o Client Service assume.</p>`)}
+   ${co('co-ok','✅',`<p><strong>A mensagem que você sempre pode usar:</strong> <em>“O departamento de Atendimento ao Cliente vai ajudar você com isso.”</em> É nesse ponto que termina a sua participação na conversa e o Client Service assume o atendimento.</p>`)}
   `},
   {t:'🌱 Continue depois', html:`
-   <div class="card"><p>Quer o pedido seja retirado, a criança continue no seu grupo ou passe para outro tutor ou formato, continue dando atenção extra nas próximas aulas. Uma recuperação que dura uma aula e depois volta silenciosamente ao normal muitas vezes não se sustenta.</p></div>
+   <div class="card"><p>Independentemente de o pedido de reembolso ser retirado, de a criança continuar no seu grupo ou de passar para outro tutor ou formato, mantenha a atenção extra nas aulas seguintes. Uma mudança positiva que dura apenas uma aula, antes de tudo voltar discretamente ao normal, dificilmente será duradoura.</p></div>
   `}
  ]
 },
 {id:'spot', numLabel:'Módulo 1', emoji:'🔎', color:'var(--coral)',
- title:'Perceba a lacuna cedo — e relate no mesmo dia',
+ title:'Perceba a lacuna cedo e relate no mesmo dia',
  desc:'As três formas que uma divergência pode tomar, um diagnóstico rápido para as primeiras aulas, uma checagem em semáforo para toda aula e como relatar no BO.',
  obj:'Reconhecer que tipo de divergência você está vendo, fazer um diagnóstico rápido, ler os sinais aula a aula e relatar o caso no BO no mesmo dia.',
  sections:[
@@ -135,9 +135,9 @@ const CONTENT = {
   `},
   {t:'🩺 O diagnóstico rápido — suas duas primeiras aulas (M1L1–M1L2)', html:`
    <div class="card"><p>A melhor janela para perceber uma divergência são as <strong>duas primeiras aulas do Módulo 1</strong>. Uma lacuna percebida só depois da aula 3, sem relato, costuma ser tarde demais para evitar um cancelamento. Três perguntas e um exercício curto, logo na primeira aula, levam menos de dez minutos.</p></div>
-   ${stepIconBlock('🗣️','“Você já trabalhou com [a ferramenta ou a linguagem do curso] antes?”', `<p>Aberta e sem pressão. Deixe o aluno falar e escute o quanto ele realmente sabe.</p><p>⚠️ <strong>Fique atento a:</strong> “Sim, eu já sei tudo isso” — ou “Não faço ideia do que você está falando.”</p>`)}
+   ${stepIconBlock('🗣️','“Você já trabalhou com [a ferramenta ou a linguagem do curso] antes?”', `<p>Aberta e sem pressão. Deixe o aluno falar e escute o quanto ele realmente sabe.</p><p>⚠️ <strong>Fique atento a:</strong> “Sim, eu já sei tudo isso” ou “Não faço ideia do que você está falando”.</p>`)}
    ${stepIconBlock('🌈','“O que você esperava aprender neste curso?”', `<p>Mostra a diferença entre aquilo em que o responsável matriculou a criança e o que o aluno realmente quer fazer.</p><p>⚠️ <strong>Fique atento a:</strong> uma resposta que não tem nada a ver com o curso em que ele está matriculado.</p>`)}
-   ${stepIconBlock('⚖️','“Que parte de hoje pareceu fácil e qual pareceu difícil?”', `<p>Pergunte depois do primeiro exercício. Isso mostra o quanto o aluno está realmente confortável com o nível.</p><p>✅ <strong>Ideal:</strong> “a primeira parte foi fácil, a segunda foi difícil” — o nível está certo.<br>⚠️ <strong>Fique atento a:</strong> “tudo foi fácil” ou “eu não entendi nada.”</p>`)}
+   ${stepIconBlock('⚖️','“Que parte de hoje pareceu fácil e qual pareceu difícil?”', `<p>Pergunte depois do primeiro exercício. Isso mostra o quanto o aluno está realmente confortável com o nível.</p><p>✅ <strong>Ideal:</strong> “a primeira parte foi fácil, a segunda foi difícil” — o nível está certo.<br>⚠️ <strong>Fique atento a:</strong> “Tudo foi fácil” ou “Eu não entendi nada”.</p>`)}
    ${stepIconBlock('✏️','Um exercício curto, feito sozinho (5 a 8 minutos)', `<p>Peça ao aluno que faça o primeiro exercício do módulo sozinho, sem ajuda. Observe quanto tempo leva e se ele consegue ao menos começar.</p><p>✅ <strong>Normal:</strong> precisa de alguma orientação e leva o tempo esperado.<br>⚠️ <strong>Fique atento a:</strong> termina na hora, ou não consegue começar sozinho.</p>`)}
    ${co('co-idea','💡',`<p><strong>Já passou da aula 2?</strong> Faça as mesmas perguntas esta semana. O diagnóstico funciona em qualquer momento do curso — quanto mais cedo você perguntar, mais opções ainda estarão abertas.</p>`)}
   `},
@@ -180,7 +180,7 @@ const CONTENT = {
   {t:'💬 O que você pode dizer à família — e o que fica para o seu Team Leader', html:`
    <div class="card"><p>Você sempre pode falar sobre a aprendizagem da criança. Você nunca apresenta, promete ou recusa uma mudança de curso, de nível ou de formato — isso vem do seu Team Leader e do Client Service.</p></div>
    ${doavoid(
-     ['Compartilhar o que você percebe sobre a aprendizagem: <em>“Ela se ilumina quando desenha personagens — estou incluindo isso nas nossas aulas.”</em>','Dizer que você compartilhou o assunto com a sua equipe e que vai retornar','Perguntar o que gostariam que o filho aproveitasse do curso','Agradecer por terem contado — com carinho, e no mesmo dia'],
+     ['Compartilhar o que você percebe sobre a aprendizagem: <em>“Ele se anima quando desenha personagens, estou incluindo isso nas nossas aulas”.</em>','Dizer que você compartilhou o assunto com a sua equipe e que vai retornar','Perguntar o que gostariam que o filho aproveitasse do curso','Agradecer por terem contado — com carinho, e no mesmo dia'],
      ['Sugerir por conta própria outro curso, uma mudança de nível ou um reembolso','Defender o curso: <em>“ele melhora mais para a frente”</em>','Prometer uma aula ou uma mudança','Dizer <em>“ele não gostou deste curso”</em> — soa como um fracasso']
    )}
    <div class="card" style="background:var(--surface2)"><h4>📨 Depois que seu Team Leader confirmar uma recomendação — apresente-a como uma oportunidade</h4>
@@ -190,11 +190,11 @@ const CONTENT = {
  ],
  ix:{
   title:'Perceba, nomeie, relate',
-  instr:'Classifique as falas e escolha a melhor atitude. 70% para liberar o próximo módulo.',
+  instr:'Classifique as falas e escolha a melhor atitude. Acerte 70% do quiz para liberar o próximo módulo.',
   items:[
    {type:'sort', prompt:'Que forma de divergência é esta?', card:`“Eu achei que a gente ia fazer jogos, não só digitar código.”`, zones:[{label:'🎯 Não é o que eu queria', fb:'Correto — a expectativa era diferente do curso. A flexibilidade pode reduzir parte da distância, e um relato mantém outras opções abertas.'},{label:'😒 Não gosta do conteúdo', fb:'Não exatamente — este aluno tem algo específico que esperava fazer. Isso é uma lacuna de “não é o que eu queria”.'},{label:'⚖️ O nível parece errado', fb:'Não exatamente — nada aqui fala de dificuldade. Trata-se do que ele esperava criar.'}], correctZone:0},
    {type:'sort', prompt:'Que forma de divergência é esta?', card:`“Tudo foi muito fácil — eu já sei isso.”`, zones:[{label:'🎯 Não é o que eu queria', fb:'Não exatamente — este aluno está falando de dificuldade, não do tema.'},{label:'😒 Não gosta do conteúdo', fb:'Não exatamente — o problema é o nível, mesmo que pareça tédio com o conteúdo.'},{label:'⚖️ O nível parece errado', fb:'Correto — parece falta de gosto, mas é o nível. Adapte agora e sinalize para uma aula de nivelamento.'}], correctZone:2},
-   {type:'sort', prompt:'Que forma de divergência é esta?', card:`Em toda aula ela faz os exercícios só porque tem que fazer, responde “sei lá” e pede para terminar mais cedo.`, zones:[{label:'🎯 Não é o que eu queria', fb:'Não exatamente — ela não disse o que esperava. O padrão é de pouco interesse no próprio conteúdo.'},{label:'😒 Não gosta do conteúdo', fb:'Correto — o conteúdo, ou a forma como é apresentado, não fala com ela. Ofereça escolhas dentro do objetivo e relate.'},{label:'⚖️ O nível parece errado', fb:'Não exatamente — nada indica um problema de dificuldade; o sinal é o pouco interesse.'}], correctZone:1},
+   {type:'sort', prompt:'Que forma de divergência é esta?', card:`Em toda aula ela faz os exercícios só porque tem que fazer, responde “sei lá” e pede para terminar mais cedo.`, zones:[{label:'🎯 Não é o que eu queria', fb:'Não exatamente — ela não disse o que esperava. O padrão é de pouco interesse no próprio conteúdo.'},{label:'😒 Não gosta do conteúdo', fb:'Correto — o conteúdo ou a forma como é apresentado não desperta o interesse dela. Ofereça escolhas dentro do objetivo e relate.'},{label:'⚖️ O nível parece errado', fb:'Não exatamente — nada indica um problema de dificuldade; o sinal é o pouco interesse.'}], correctZone:1},
    {type:'choice', prompt:`No diagnóstico, você pergunta “O que você esperava aprender?” e o aluno responde: “Desenhar anime — não isso.” Qual é o melhor próximo passo?`, opts:[`Explicar que o anime vem mais para a frente no curso e continuar exatamente como planejado`,`Trazer o interesse dele para a aula de hoje, no que for possível, e relatar no BO no mesmo dia`,`Esperar mais duas aulas para ver se passa`], correct:1, fb:`Flexibilize já na aula o que for possível e relate no mesmo dia, para que a equipe ainda tenha todas as opções. Esperar, ou defender o plano, gasta a janela de tempo.`},
    {type:'sort', prompt:'Onde este quadro se encaixa no semáforo?', card:`Duas aulas seguidas: respostas de uma palavra e pedidos para terminar mais cedo.`, zones:[{label:'🟢 Verde', fb:'Não exatamente — duas aulas de respostas de uma palavra e vontade de sair mais cedo não é “tudo bem”.'},{label:'🟡 Amarelo', fb:'Correto — anote, tente uma mudança flexível e avise seu Team Leader na mesma semana. Não espere chegar ao vermelho.'},{label:'🔴 Vermelho', fb:'Ainda não — vermelho significa recusa, desgosto declarado ou um responsável escrevendo. Mas amarelo duas vezes seguidas já significa: avise seu Team Leader esta semana.'}], correctZone:1},
   ]
@@ -234,9 +234,9 @@ const CONTENT = {
      {ic:'🧑', title:'De 9 a 11 anos',
       intro:'Eles querem opinar sobre o que constroem e reconhecer coisas do próprio mundo.',
       tips:[
-       {ic:'🧩', html:`<strong>Tema mais missão.</strong> <em>“Escolha o tema — espaço, futebol ou um jogo de que você gosta — e a missão continua a mesma: usar a técnica de hoje.”</em>`},
+       {ic:'🧩', html:`<strong>Tema + missão.</strong> <em>“Escolha o tema — espaço, futebol ou um jogo de que você gosta — e a missão continua a mesma: usar a técnica de hoje.”</em>`},
        {ic:'🔢', html:`<strong>Nota rápida.</strong> <em>“De 1 a 5, quanto você gosta deste tema? O que faria ele valer 5?”</em>`},
-       {ic:'🌟', html:`<strong>Uma fase bônus para a ideia dele.</strong> Terminada a tarefa principal, ele acrescenta algo seu.`},
+       {ic:'🌟', html:`<strong>Uma fase bônus para a ideia dele.</strong> Terminada a tarefa principal, ele acrescenta algo próprio.`},
        {ic:'📺', html:`<strong>Use o que eles conhecem.</strong> Faça referência aos jogos ou séries que mencionam — mostra que você escutou.`}
       ]},
      {ic:'🧑‍🎓', title:'A partir de 12 anos',
@@ -274,7 +274,7 @@ const CONTENT = {
  ],
  ix:{
   title:'Flexibilize — sem perder o objetivo',
-  instr:'Escolha a melhor atitude ou classifique cada situação. 70% para liberar a checklist final.',
+  instr:'Escolha a melhor atitude ou classifique cada situação. Acerte 70% do quiz para liberar o checklist final.',
   items:[
    {type:'choice', prompt:`Um aluno do curso de Ilustração diz: “Eu só quero desenhar anime.” Qual é a melhor resposta?`, opts:[`Dizer que anime não faz parte do curso`,`Deixar que ele desenhe personagens de anime nos exercícios enquanto você ensina luz, proporção e cor — e relatar no BO`,`Deixar que ele desenhe o que quiser e abandonar o objetivo da aula`], correct:1, fb:`O objetivo (luz, proporção, cor) permanece; o personagem é dele. Depois, relate no BO para que a equipe possa avaliar mais opções. Recusar faz perder o aluno; abandonar o objetivo faz perder a aprendizagem.`},
    {type:'sort', prompt:'Quem resolve isto?', card:`Deixar que o aluno escolha o tema do projeto.`, zones:[{label:'✅ Eu mesmo posso resolver', fb:'Correto — escolher um tema dentro do objetivo é totalmente seu e não precisa de permissão.'},{label:'🧭 Precisa do meu Team Leader', fb:'Não exatamente — uma escolha de tema que mantém o objetivo faz parte do seu próprio ensino.'}], correctZone:0},
@@ -290,7 +290,7 @@ const CONTENT = {
 {id:'checklist', numLabel:'Checklist final', emoji:'✅', color:'var(--coral)',
  title:'Checklist final',
  desc:'Sem quiz aqui — apenas o essencial deste minitreinamento, antes de você encerrá-lo.',
- obj:'Revise a checklist abaixo. Este módulo não tem nota — leia e depois conclua o minitreinamento.',
+ obj:'Revise o checklist abaixo. Este módulo não tem avaliação. Leia os itens e, em seguida, conclua o minitreinamento.',
  sections:[
   {t:'🛟 Se já existe um pedido de reembolso', html:`
    ${numlist([
