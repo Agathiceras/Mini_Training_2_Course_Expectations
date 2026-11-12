@@ -22,7 +22,7 @@ const CONTENT = {
     heroEyebrow:"🎯 Mini-Training",
     heroTitle:"Closing the <span class=\"h-pill\">Expectations</span> Gap",
     heroIntro:"You've received this training because you have students who have requested a refund because the course didn't meet their expectations, wasn't what they wanted, or they don't like its content. Here, we'll show you what you can do as a tutor and how to handle these situations.",
-    heroWork:"Work through 4 short modules. Each module check needs 70%+ to unlock the next. About 20–25 minutes total.",
+    heroWork:"Work through 4 short modules. Each module check needs 70%+ to unlock the next. About 30–35 minutes total.",
     startBtn:"🚀 Start Training",
     pathLabel:'Your learning path',
     devTitle:'Dev: unlock all modules for review',
@@ -135,8 +135,8 @@ const CONTENT = {
 },
 {id:'spot', numLabel:'Module 1', emoji:'🔎', color:'var(--coral)',
  title:'Spot the Gap Early — and Report It the Same Day',
- desc:'The three shapes a mismatch takes, a quick diagnostic for the first lessons, a traffic-light check for every lesson, and how to report it in BO.',
- obj:'Recognise which kind of mismatch you are looking at, run a quick diagnostic, read the signals lesson by lesson, and report the case in BO the same day.',
+ desc:'The three shapes a mismatch takes, a quick diagnostic for the first lessons, how to show the course roadmap to the student and the parent, a traffic-light check for every lesson, and how to report it in BO.',
+ obj:'Recognise which kind of mismatch you are looking at, run a quick diagnostic, explain the course roadmap early (what they\'ll build, coding vs design, how AI tools are used), read the signals lesson by lesson, and report the case in BO the same day.',
  sections:[
   {t:'🧭 The three shapes of a mismatch', html:`
    <div class="card"><p>"I don't like this course" can mean three different things — and each one needs a slightly different move. Learn to tell them apart.</p></div>
@@ -153,6 +153,36 @@ const CONTENT = {
    ${stepIconBlock('⚖️','"What part of today felt easy, and what felt hard?"', `<p>Ask it after the first exercise. It calibrates how comfortable they really are with the level.</p><p>✅ <strong>Ideal:</strong> "the first part was easy, the second was hard" — the level is right.<br>⚠️ <strong>Watch for:</strong> "all of it was easy" or "I didn't understand any of it."</p>`)}
    ${stepIconBlock('✏️','A short solo exercise (5–8 minutes)', `<p>Ask the student to complete the module's first exercise on their own, without help. Notice how long it takes and whether they can start at all.</p><p>✅ <strong>Normal:</strong> needs some guidance and takes the expected time.<br>⚠️ <strong>Watch for:</strong> finishes instantly, or can't start alone.</p>`)}
    ${co('co-idea','💡',`<p><strong>Past lesson 2 already?</strong> Run the same questions this week. The diagnostic works at any point in the course — the earlier you ask, the more options are still open.</p>`)}
+  `},
+  {t:'🗺️ Show the roadmap — to the student and to the parent', html:`
+   <div class="card"><p>Many "this isn't what we expected" cases start with a picture formed before you ever met the family — in the sales conversation, the trial lesson or an advert. Your first lessons are the first chance to show <strong>the real course</strong>: where it goes, what they will make, and how it works. A family that knows the route is far less likely to feel surprised by it later.</p></div>
+   ${patternCards([
+     {ic:'🏗️', title:'What they will build', desc:'The final project, and what they make along the way, module by module.', note:'<em>"By the end of this module you\'ll have…"</em> gives a reason to get through the basics.'},
+     {ic:'⚖️', title:'Coding, design — or both', desc:'How much of the course is writing code, and how much is drawing, designing or building visually.', note:'Be honest about the balance. A child expecting to draw in a coding course needs to know early.'},
+     {ic:'🤖', title:'How AI tools are used', desc:'If the course uses AI tools: what for, and what the student still does themselves.', note:'Explain it the way the course program describes it — no more, no less.'}
+   ],3)}
+   ${co('co-idea','📘',`<p><strong>Where to find it:</strong> the course program and the lesson manuals in BO show the modules, the projects and the tools. Check them before lesson 1. Not sure how the course uses AI, or how much of it is coding? Ask in your course's Slack channel or your Team Leader — never guess in front of a family.</p>`)}
+   ${dimTabs([
+     {ic:'🧒', title:'With the student',
+      intro:'Show, don\'t list. A finished example says more than a syllabus.',
+      tips:[
+       {ic:'🎬', html:`<strong>Show a finished example</strong> of what the course builds, in the first lesson: <em>"This is what you'll be able to make."</em>`},
+       {ic:'🧭', html:`<strong>Mark the route:</strong> at the start of each module, say what it adds to the final project.`},
+       {ic:'🔗', html:`<strong>Connect the basics to the goal:</strong> <em>"Today's loop is what will make your character move by itself later."</em>`},
+       {ic:'🤖', html:`<strong>If AI tools are used,</strong> say what they help with and what stays the student's own work.`}
+      ]},
+     {ic:'👪', title:'With the parent',
+      intro:'A short message after the first lesson prevents most surprises.',
+      tips:[
+       {ic:'📨', html:`<strong>Send it after lesson 1–2:</strong> what the course builds, what the first modules cover, and the balance of coding and design.`},
+       {ic:'🗓️', html:`<strong>Say what the first weeks look like:</strong> the basics come first, the bigger projects later.`},
+       {ic:'🙋', html:`<strong>Invite questions</strong> about the content — and if they expected something different, report it in BO the same day.`},
+       {ic:'🚫', html:`<strong>Don\'t oversell.</strong> Never describe projects, tools or results the course doesn\'t include.`}
+      ]}
+   ],'✅ That\'s the student and the parent.')}
+   <div class="card" style="background:var(--surface2)"><h4>📨 Roadmap message for the parent — copy and adapt</h4>
+   <p style="font-size:13.5px;line-height:1.75"><em>"Hi [parent's name], I'm [your name], [student]'s tutor. I'd like to share where this course is going: by the end, [student] will have built [final project]. The first modules focus on [the basics — e.g. how the tool works and the first commands], and then [what comes next]. Most of the lessons are [coding / design / a mix of both]. [If the course uses AI tools: We use [tool] to [purpose], and [student] still [writes the code / creates the designs] themselves.] If you have any questions about the content, I'm happy to tell you more."</em></p></div>
+   ${co('co-cute','😟',`<p><strong>If a parent is upset because a module's or a lesson's activity isn't what they wanted.</strong> Listen first. Then tell them what the next modules will cover (check the course program), and explain that the storytelling can be adapted to what their child enjoys — the tools and the knowledge stay the same. In courses that use several tools, offer the flexibility to work with a different program for the same task; the wiki / teacher notes list alternatives for many of them. If they want something the course doesn't include, report it in BO and tell your Team Leader — never promise a course change.</p><p><em>"I understand — this activity isn't quite what [student] was hoping for. In the next modules we'll [what comes next]. And the storytelling is flexible: [student] can adapt the story to [their interest]. What matters is the skill they're learning, and that stays the same."</em></p>`)}
   `},
   {t:'🚥 Keep reading it every lesson', html:`
    <div class="card"><p>After the first lessons, a simple traffic light after every class keeps you honest. It takes thirty seconds.</p></div>
@@ -208,6 +238,7 @@ const CONTENT = {
    {type:'sort', prompt:'Which shape of mismatch is this?', card:`"I thought we were going to make games, not just type code."`, zones:[{label:'🎯 Not what I came for', fb:'Correct — the expectation was different from the course. Flexibility can bridge part of the gap, and a report keeps other options open.'},{label:'😒 Doesn\'t like the content', fb:'Not quite — this student has a specific thing they expected to do. That is a "not what I came for" gap.'},{label:'⚖️ The level feels wrong', fb:'Not quite — nothing here is about difficulty. It is about what they expected to build.'}], correctZone:0},
    {type:'sort', prompt:'Which shape of mismatch is this?', card:`"All of it was really easy — I already know this."`, zones:[{label:'🎯 Not what I came for', fb:'Not quite — this student is talking about difficulty, not about the topic.'},{label:'😒 Doesn\'t like the content', fb:'Not quite — the problem is the level, even if it sounds like boredom with the content.'},{label:'⚖️ The level feels wrong', fb:'Correct — it looks like dislike but it is the level. Adapt now, and flag it for a leveling lesson.'}], correctZone:2},
    {type:'sort', prompt:'Which shape of mismatch is this?', card:`Every lesson she does the exercises only because she has to, answers "dunno", and asks to finish early.`, zones:[{label:'🎯 Not what I came for', fb:'Not quite — she hasn\'t said what she expected. The pattern is about low interest in the content itself.'},{label:'😒 Doesn\'t like the content', fb:'Correct — the content, or the way it is framed, doesn\'t speak to her. Offer choices inside the objective and report it.'},{label:'⚖️ The level feels wrong', fb:'Not quite — nothing shows a difficulty problem; the signal is low interest.'}], correctZone:1},
+   {type:'choice', prompt:`After lesson 1, a parent asks: "So what exactly will my son make in this course?" What do you do?`, opts:[`Tell them the course gets more fun later and they'll see`,`Describe the final project and the first modules from the course program, say honestly how much is coding and how much is design, and invite more questions`,`Promise he'll be able to make any game he wants by the end`], correct:1, fb:`The roadmap comes from the course program: what they'll build, the route, and the real balance of coding and design. Vague answers and big promises are how "this isn't what we expected" starts.`},
    {type:'choice', prompt:`In the diagnostic you ask "What were you expecting to learn?" and the student says: "To draw anime — not this." What is the best next step?`, opts:[`Explain that anime comes later in the course and continue exactly as planned`,`Bring their interest into today's lesson where you can, and report it in BO the same day`,`Wait two more lessons to see whether it passes`], correct:1, fb:`Flex what you can in the lesson right away, and report it the same day so the team still has all its options. Waiting, or defending the plan, spends the window.`},
    {type:'sort', prompt:'Where does this snapshot sit on the traffic light?', card:`Two lessons in a row: one-word answers and asking to finish early.`, zones:[{label:'🟢 Green', fb:'Not quite — two lessons of one-word answers and wanting to leave early is not "all good".'},{label:'🟡 Yellow', fb:'Correct — note it, try a flexible change, and tell your Team Leader that same week. Don\'t wait for red.'},{label:'🔴 Red', fb:'Not yet — red means refusal, open dislike, or a parent writing in. But yellow twice in a row already means: tell your Team Leader this week.'}], correctZone:1},
   ]
@@ -215,8 +246,8 @@ const CONTENT = {
 },
 {id:'flex', numLabel:'Module 2', emoji:'🎛️', color:'var(--coral)',
  title:'Make the Course Fit Them — Flexibility That Keeps the Objective',
- desc:'How to adapt a lesson to what a student really wants to learn without losing the learning goal, how to offer choices by age, and when your Team Leader must step in.',
- obj:'Adapt a lesson to the student\'s interests while keeping the learning objective, offer choices that suit their age, and know when flexibility is not enough and your Team Leader must step in.',
+ desc:'How to adapt a lesson to what a student really wants to learn without losing the learning goal, how to offer choices by age, when your Team Leader must step in, and how to support students who are still learning to use the computer.',
+ obj:'Adapt a lesson to the student\'s interests while keeping the learning objective, offer choices that suit their age, know when flexibility is not enough and your Team Leader must step in, and support students with weak computer skills from the first module.',
  sections:[
   {t:'🎯 The rule: keep the objective, flex the path', html:`
    <div class="card"><p>You don't have to choose between "follow the manual" and "let them do whatever they like". The manual tells you what the lesson is <strong>for</strong>. Almost everything else can bend.</p></div>
@@ -283,6 +314,26 @@ const CONTENT = {
      ['Ask what they would like to create at the start of the next lesson','Show their work to the group','Celebrate the moment their idea appears in the lesson'],
      ['Saying <em>"that\'s not in the plan"</em>','Defending the course instead of listening','Letting "their idea" replace the lesson goal']
    )}
+  `},
+  {t:'⌨️ When the computer itself is the hard part', html:`
+   <div class="card"><p>Sometimes "too hard" has nothing to do with the course content. The student is still learning to use the computer: finding keys, dragging, copying, switching windows. Every task then becomes two tasks at once — and in the first module that can make a child, or a parent, decide the course "isn't for them". This is something you can work on from lesson 1.</p></div>
+   ${symCards([
+     {ic:'🔍', title:'Signs to look for', sub:'In the first lessons',
+      see:`Searches the keyboard for every key · can't drag, right-click, copy or paste · gets lost when switching between windows or tabs · hesitates to share their screen · understands the idea but never finishes because of the <em>how</em>.`,
+      tip:`It often looks like slowness or lack of interest. Ask them to share their screen and watch <em>how</em> they work, not only <em>what</em> they produce.`},
+     {ic:'🧑‍🏫', title:'What you do in the lesson',
+      do:`<ul><li><strong>Model slowly, with your cursor visible,</strong> and narrate every click: <em>"top left, the green button."</em> Zoom in when you share.</li><li><strong>One step, then check:</strong> <em>"Show me your screen — where are you now?"</em></li><li><strong>A two-minute skills warm-up</strong> in the first module: copy and paste, drag, save, switch windows.</li><li><strong>A shortcut list in the chat:</strong> Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S, Alt+Tab (Cmd on a Mac).</li><li><strong>Praise the computer skills too:</strong> <em>"You saved your project on your own!"</em></li></ul>`,
+      avoid:`Taking control of their screen or doing the task for them — it ends the problem for today and confirms that they can't.`},
+     {ic:'👪', title:'Involve the parent in the setup',
+      do:`Before lesson 1, or as soon as you notice it: ask the family to check that Chrome is installed and up to date, that the course tools are installed if the course needs them, and that the login is saved. With the youngest, a parent nearby in the first lessons helps with the setup — not with the tasks.`,
+      say:`<em>"Hi [parent's name]! To help [student] feel confident from the start, could you check these three things before our next lesson: [Chrome up to date / the course program installed / the login saved]? During the lesson, it helps if you're nearby for the first few minutes in case something needs setting up — the tasks themselves are [student]'s to do."</em>`},
+     {ic:'🐢', title:'When the computer is slow',
+      do:`<ul><li><strong>Close other programs and tabs</strong> before the lesson, and use Google Chrome.</li><li><strong>Blender running slowly?</strong> The wiki has guides to configure Blender for better performance — use them to help the student set it up, and the course also includes a performance guide in its first lessons.</li><li><strong>If the computer doesn't meet the course requirements</strong> at all, tell your Team Leader: Teaching and Sales decide how the student continues.</li></ul>`,
+      avoid:`Asking the family to buy a new computer, or promising a course change.`},
+     {ic:'📝', title:'When it\'s more than you can fix in the group',
+      do:`Leave a comment in BO with what you saw and what you tried, and tell your Team Leader. You can request an extra lesson to practise the basics — your Team Leader decides.`,
+      avoid:`Offering an extra lesson to the family before it's approved.`}
+   ])}
   `}
  ],
  ix:{
@@ -296,7 +347,9 @@ const CONTENT = {
    {type:'choice', prompt:`A 7-year-old tells you the lessons are boring. Which offer fits best?`, opts:[`"Let's design the whole project together — what's your five-point brief?"`,`"What do you want your character to be — a dragon, a robot or a cat?" and use that character in today's task`,`"This is how the course works — you'll like it later."`], correct:1, fb:`Young children choose best between two or three concrete, playful options. An open brief is for older students, and "you'll like it later" defends the course instead of listening.`},
    {type:'choice', prompt:`What does "keep the objective, flex the path" mean?`, opts:[`Skip the tasks the student doesn't like`,`Follow only the student's interests`,`Change the theme or the task, but keep the skill the lesson is for`], correct:2, fb:`The manual's objective and outcomes stay; theme, character, topic and order can bend.`},
    {type:'choice', prompt:`A student asks: "Can I do a different course instead?" What do you say?`, opts:[`"Yes, I'll arrange it for you."`,`"No, you've already started this one."`,`"I love that you're telling me. I'll check with my team what we can do — and meanwhile let's use your idea in today's lesson."`], correct:2, fb:`Neither promising nor refusing is yours to do — but listening, using their idea now, and starting the internal conversation is exactly your job.`},
-   {type:'sort', prompt:'Does this keep the learning objective?', card:`The lesson goal is the animation technique, so the student animates any object they choose.`, zones:[{label:'✅ Keeps the objective', fb:'Correct — the choice is theirs, the technique is still practised.'},{label:'⛔ Loses the objective', fb:'Not quite — they still practise the technique the lesson is for.'}], correctZone:0}
+   {type:'sort', prompt:'Does this keep the learning objective?', card:`The lesson goal is the animation technique, so the student animates any object they choose.`, zones:[{label:'✅ Keeps the objective', fb:'Correct — the choice is theirs, the technique is still practised.'},{label:'⛔ Loses the objective', fb:'Not quite — they still practise the technique the lesson is for.'}], correctZone:0},
+   {type:'choice', prompt:`In lesson 2, a 7-year-old understands the task but never finishes: he searches for every key and can't copy and paste. What helps most?`, opts:[`Take control of his screen and do it for him so he keeps up`,`Tell the parent the course is too advanced for him`,`Model slowly with your cursor visible, one step at a time, add a short skills warm-up, and ask the parent to check the setup`], correct:2, fb:`Weak computer skills can be trained from lesson 1. Doing it for him confirms he can't; calling the course "too advanced" isn't yours to decide.`},
+   {type:'sort', prompt:'Who handles this?', card:`A student's computer can't run Blender at all, even after closing other programs and following the wiki's performance guide.`, zones:[{label:'✅ I can do it myself', fb:'Not quite — you\'ve done your part. If the computer doesn\'t meet the course requirements, the decision about how the student continues isn\'t yours.'},{label:'🧭 It needs my Team Leader', fb:'Correct — tell your Team Leader: Teaching and Sales decide how the student continues. Never ask the family to buy a computer or promise a course change.'}], correctZone:1}
   ]
  }
 },
@@ -324,7 +377,12 @@ const CONTENT = {
      'I never promise a change of course, level or an extra lesson — I recommend in BO and say "I\'ll check with my team"',
      'I don\'t defend the course or say it "gets better later" — I listen first, then adapt',
      'When a parent says the course isn\'t what they expected, I acknowledge, take it to my Team Leader and Client Service before replying, and record their words in BO',
-     'I celebrate the moment the student\'s own idea shows up in the lesson, and I show their work to the group'
+     'I celebrate the moment the student\'s own idea shows up in the lesson, and I show their work to the group',
+     'In the first lessons I show the roadmap: what they will build, how much is coding and how much is design, and how AI tools are used if the course uses them',
+     'I send the parent a short roadmap message after lesson 1–2, based on the course program — never promising projects or results the course doesn\'t include',
+     'When a student is still learning to use the computer, I model slowly with my cursor visible, give one step at a time, and add a short skills warm-up',
+     'I ask the parent to help with the setup (Chrome, the course tools, the login) — not with the tasks',
+     'If the computer is slow, I help the student close other programs and use the wiki\'s Blender performance guides; if it can\'t run the course, I tell my Team Leader'
    ])}
   `},
   {t:'', html:`
