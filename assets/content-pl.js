@@ -22,7 +22,7 @@ const CONTENT = {
     heroEyebrow:"🎯 Miniszkolenie",
     heroTitle:"Jak zniwelować <span class=\"h-pill\">rozbieżność oczekiwań</span>",
     heroIntro:"Otrzymujesz to szkolenie, ponieważ masz uczniów, którzy poprosili o zwrot pieniędzy, bo kurs nie spełnił ich oczekiwań, nie był tym, czego chcieli, albo nie podoba im się jego treść. Pokażemy ci, co możesz zrobić jako nauczyciel i jak radzić sobie w takich sytuacjach.",
-    heroWork:"Przejdź przez 4 krótkie moduły. Aby odblokować kolejny, w sprawdzianie każdego modułu potrzebujesz co najmniej 70%. Całość zajmie około 20–25 minut.",
+    heroWork:"Ukończ 4 krótkie moduły. Aby odblokować kolejny moduł, musisz uzyskać co najmniej 70% w teście danego modułu. Łączny czas: około 30–35 minut.",
     startBtn:"🚀 Rozpocznij szkolenie",
     pathLabel:'Twoja ścieżka nauki',
     devTitle:'Dev: odblokuj wszystkie moduły do przeglądu',
@@ -135,8 +135,8 @@ const CONTENT = {
 },
 {id:'spot', numLabel:'Moduł 1', emoji:'🔎', color:'var(--coral)',
  title:'Wychwyć rozbieżność wcześnie — i zgłoś ją tego samego dnia',
- desc:'Trzy postacie niedopasowania, szybka diagnoza na pierwszych lekcjach, klasyfikacja po każdej lekcji i zgłaszanie sprawy w BO.',
- obj:'Rozpoznać, z jakim rodzajem niedopasowania masz do czynienia, przeprowadzić szybką diagnozę, nauczyć się odczytywania sygnałów lekcja po lekcji i zgłaszania sprawy w BO tego samego dnia.',
+ desc:'Trzy formy, jakie może przybrać rozbieżność, szybka diagnoza na pierwszych lekcjach, jak pokazać plan kursu uczniowi i rodzicowi, sprawdzanie «sygnalizacji świetlnej» na każdej lekcji oraz jak zgłosić sprawę w BO.',
+ obj:'Rozpoznawanie, z jakim rodzajem rozbieżności masz do czynienia, przeprowadzanie szybkiej diagnozy, wczesne wyjaśnianie planu kursu (co uczniowie stworzą, programowanie a projektowanie, jak wykorzystuje się narzędzia AI), obserwowanie sygnałów lekcja po lekcji i zgłaszanie sprawy w BO tego samego dnia.',
  sections:[
   {t:'🧭 Trzy postacie niedopasowania', html:`
    <div class="card"><p>„Nie lubię tego kursu” może oznaczać trzy różne rzeczy — i każda wymaga nieco innych działań. Naucz się je rozróżniać.</p></div>
@@ -153,6 +153,34 @@ const CONTENT = {
    ${stepIconBlock('⚖️','„Co dzisiaj było łatwe, a co trudne?”', `<p>Zadaj to pytanie po pierwszym ćwiczeniu. Pozwala ocenić, jak swobodnie uczeń naprawdę czuje się na tym poziomie.</p><p>✅ <strong>Idealnie:</strong> „pierwsza część była łatwa, druga trudna” — poziom jest odpowiedni.<br>⚠️ <strong>Zwróć uwagę na:</strong> „wszystko było łatwe” albo „nic z tego nie zrozumiałem”.</p>`)}
    ${stepIconBlock('✏️','Krótkie samodzielne ćwiczenie (5–8 minut)', `<p>Poproś ucznia, by samodzielnie, bez pomocy wykonał pierwsze ćwiczenie modułu. Zwróć uwagę, ile czasu mu to zajmuje i czy w ogóle potrafi zacząć.</p><p>✅ <strong>Normalnie:</strong> potrzebuje trochę wskazówek i mieści się w przewidzianym czasie.<br>⚠️ <strong>Zwróć uwagę na:</strong> kończy natychmiast albo nie potrafi zacząć sam.</p>`)}
    ${co('co-idea','💡',`<p><strong>Jesteście już po lekcji 2?</strong> Zadaj te same pytania w tym tygodniu. Diagnoza działa na każdym etapie kursu — im wcześniej zapytasz, tym więcej możliwości pozostaje otwartych.</p>`)}
+  `},
+  {t:'🗺️ Pokaż plan kursu — uczniowi i rodzicowi', html:`
+   <div class="card"><p>Wiele sytuacji typu «to nie jest to, czego oczekiwaliśmy» zaczyna się od obrazu, który rodzina wyrobiła sobie, zanim Cię poznała — podczas rozmowy ze sprzedażą, lekcji próbnej lub w reklamie. Twoje pierwsze lekcje to pierwsza okazja, by pokazać <strong>prawdziwy kurs</strong>: dokąd prowadzi, co uczniowie stworzą i jak działa. Rodzina, która zna drogę, znacznie rzadziej będzie później zaskoczona.</p></div>
+   ${patternCards([
+     {ic:'🏗️', title:'Co uczniowie stworzą', desc:'Projekt końcowy oraz to, co powstaje po drodze, moduł po module.', note:'<em>«Pod koniec tego modułu będziesz mieć…»</em> daje powód, by przejść przez podstawy.'},
+     {ic:'⚖️', title:'Programowanie, projektowanie — lub jedno i drugie', desc:'Jaka część kursu to pisanie kodu, a jaka rysowanie, projektowanie lub budowanie w sposób wizualny.', note:'Mów szczerze o proporcjach. Dziecko, które spodziewa się rysować na kursie programowania, powinno wiedzieć o tym od początku.'},
+     {ic:'🤖', title:'Jak wykorzystuje się narzędzia AI', desc:'Jeśli kurs korzysta z narzędzi AI: do czego służą i co uczeń nadal robi samodzielnie.', note:'Wyjaśniaj to tak, jak opisuje program kursu — ani mniej, ani więcej.'}
+   ],3)}
+   ${co('co-idea','📘',`<p><strong>Gdzie to znaleźć:</strong> program kursu i podręczniki lekcji w BO pokazują moduły, projekty i narzędzia. Sprawdź je przed lekcją 1. Nie masz pewności, jak kurs wykorzystuje AI lub jaka część to programowanie? Zapytaj na kanale Slack swojego kursu lub swojego Team Leadera — nigdy nie zgaduj przy rodzinie.</p>`)}
+   ${dimTabs([
+     {ic:'🧒', title:'Z uczniem',
+      intro:'Pokazuj, nie wymieniaj. Gotowy przykład mówi więcej niż program kursu.',
+      tips:[
+       {ic:'🎬', html:`<strong>Na pierwszej lekcji pokaż gotowy przykład</strong> tego, co powstaje na kursie: <em>«Oto, co będziesz potrafić stworzyć».</em>`},
+       {ic:'🧭', html:`<strong>Wyznacz trasę:</strong> na początku każdego modułu powiedz, co wnosi do projektu końcowego.`},
+       {ic:'🔗', html:`<strong>Połącz podstawy z celem:</strong> <em>«Dzisiejsza pętla sprawi później, że Twoja postać będzie poruszać się sama».</em>`},
+       {ic:'🤖', html:`<strong>Jeśli używane są narzędzia AI,</strong> powiedz, w czym pomagają i co nadal jest samodzielną pracą ucznia.`}
+      ]},
+     {ic:'👪', title:'Z rodzicem',
+      intro:'Krótka wiadomość po pierwszej lekcji zapobiega większości niespodzianek.',
+      tips:[
+       {ic:'📨', html:`<strong>Wyślij ją po lekcjach 1–2:</strong> co powstaje na kursie, co obejmują pierwsze moduły oraz jakie są proporcje programowania i projektowania.`},
+       {ic:'🗓️', html:`<strong>Powiedz, jak będą wyglądać pierwsze tygodnie:</strong> najpierw podstawy, potem większe projekty.`},
+       {ic:'🙋', html:`<strong>Zachęć do zadawania pytań</strong> o treść — a jeśli spodziewali się czegoś innego, zgłoś to w BO tego samego dnia.`},
+       {ic:'🚫', html:`<strong>Nie obiecuj za dużo.</strong> Nigdy nie opisuj projektów, narzędzi ani efektów, których kurs nie obejmuje.`}
+      ]}
+   ],'✅ To wszystko, jeśli chodzi o ucznia i rodzica.')}
+   ${co('co-cute','😟',`<p><strong>Jeśli rodzic jest niezadowolony, ponieważ aktywność w danym module lub lekcji nie odpowiada jego oczekiwaniom.</strong> Najpierw wysłuchaj rodzica. Następnie wyjaśnij, jakie zagadnienia będą omawiane w kolejnych modułach (sprawdź program kursu) i poinformuj, że fabułę lub tematykę aktywności można dostosować do zainteresowań dziecka, ale narzędzia i zdobywana wiedza pozostaną takie same. W kursach wykorzystujących kilka narzędzi zaproponuj możliwość użycia innego programu do wykonania tego samego zadania. Wiki i notatki dla nauczycieli zawierają alternatywy dla wielu z nich. Jeśli rodzina chce czegoś, czego nie obejmuje kurs, zgłoś to w BO i poinformuj swojego Team Leadera. Nigdy nie obiecuj zmiany programu kursu.</p>`)}
   `},
   {t:'🚥 Odczytuj sygnały na każdej lekcji', html:`
    <div class="card"><p>Prosta klasyfikacja uczniów po każdych zajęciach pomaga zachować obiektywizm. Zajmuje to 30 sekund.</p></div>
@@ -182,7 +210,7 @@ const CONTENT = {
      ]}
    ])}
    <div class="card" style="background:var(--surface2)"><h4>📨 Jak wygląda przydatne zgłoszenie — wzór do skopiowania i uzupełnienia</h4>
-   <p style="font-size:13.5px;line-height:1.75"><strong>Uczeń:</strong> [imię] · <strong>Kurs / poziom:</strong> [np. Illustration, poziom 1] · <strong>Lekcja:</strong> [M1L2 — data]<br>
+   <p style="font-size:13.5px;line-height:1.75"><strong>Uczeń:</strong> [imię] · <strong>Kurs / poziom:</strong> [np. Digital Creativity, poziom 1] · <strong>Lekcja:</strong> [M1L2 — data]<br>
    <strong>Obserwacje:</strong> [2–3 zdania: sygnał, moment, słowa ucznia]<br>
    <strong>Moim zdaniem przyczyna to:</strong> ☐ nie tego się spodziewał &nbsp; ☐ nie lubi treści &nbsp; ☐ poziom nie pasuje<br>
    <strong>Co już zostało wypróbowane na lekcji:</strong> [np. uczennica sama wybrała motyw postaci]<br>
@@ -196,8 +224,6 @@ const CONTENT = {
      ['Podziel się tym, co zauważasz w nauce: <em>„Ona się rozpromienia, gdy rysuje postacie — wplatam to w nasze lekcje.”</em>','Powiedz, że przekazujesz to swojemu zespołowi i wrócisz z odpowiedzią','Zapytaj, co rodzina chciałaby, aby dziecko wyniosło z kursu','Podziękuj za informację — ciepło i tego samego dnia'],
      ['Samodzielne proponowanie innego kursu, zmiany poziomu lub zwrotu','Bronienie kursu: <em>„później będzie lepiej”</em>','Obiecywanie lekcji lub zmiany','Mówienie <em>„nie spodobał mu się ten kurs”</em> — brzmi to jak porażka']
    )}
-   <div class="card" style="background:var(--surface2)"><h4>📨 Gdy lider zespołu potwierdzi rekomendację — przedstaw ją jako szansę</h4>
-   <p style="font-size:13.5px;line-height:1.75"><em>„Dzień dobry, [imię rodzica], tu [twoje imię], nauczyciel [imię ucznia] w Kodland. Widzę, że [imię ucznia] ma duży potencjał, ale już na pierwszych lekcjach wyczuwam, że profil tego kursu nie do końca odpowiada temu, czego [imię ucznia] oczekuje — [np. na zajęciach padło, że największą frajdę sprawiałoby tworzenie gier, a nie samo pisanie kodu]. Zależy mi, żeby nauka w Kodland dawała [imię ucznia] jak najwięcej radości i korzyści, dlatego razem z naszym zespołem chcielibyśmy sprawdzić, czy [inny kurs] nie byłby lepszym wyborem. Czy znajdzie Pan/Pani w tym tygodniu kilka minut na krótką rozmowę?”</em></p></div>
    ${co('co-idea','💡',`<p><strong>Używaj zwrotu</strong> „znaleźliśmy coś, co może spodobać się jeszcze bardziej” — <strong>nigdy</strong> „ten kurs się nie spodobał”.</p>`)}
   `}
  ],
@@ -208,6 +234,7 @@ const CONTENT = {
    {type:'sort', prompt:'Jaka to postać niedopasowania?', card:`„Myślałem, że będziemy robić gry, a nie tylko pisać kod.”`, zones:[{label:'🎯 Nie o to mi chodziło', fb:'Zgadza się — oczekiwanie różniło się od kursu. Elastyczne prowadzenie lekcji może zniwelować część rozbieżności, a zgłoszenie pozostawia inne możliwości otwarte.'},{label:'😒 Nie lubi treści', fb:'Nie do końca — ten uczeń miał konkretne wyobrażenie o tym, co będzie robić. To rozbieżność typu „nie o to mi chodziło”.'},{label:'⚖️ Poziom nie pasuje', fb:'Nie do końca — nic tu nie dotyczy trudności. Chodzi o to, co uczeń spodziewał się tworzyć.'}], correctZone:0},
    {type:'sort', prompt:'Jaka to postać niedopasowania?', card:`„Wszystko było naprawdę łatwe — ja to już umiem.”`, zones:[{label:'🎯 Nie o to mi chodziło', fb:'Nie do końca — ten uczeń mówi o trudności, a nie o temacie.'},{label:'😒 Nie lubi treści', fb:'Nie do końca — problemem jest poziom, nawet jeśli brzmi to jak znudzenie treścią.'},{label:'⚖️ Poziom nie pasuje', fb:'Zgadza się — może wyglądać to na niechęć, ale chodzi o poziom. Dostosuj teraz i zgłoś to z myślą o lekcji poziomującej.'}], correctZone:2},
    {type:'sort', prompt:'Jaka to postać niedopasowania?', card:`Na każdej lekcji robi ćwiczenia tylko dlatego, że musi, odpowiada „nie wiem” i prosi o wcześniejsze zakończenie.`, zones:[{label:'🎯 Nie o to mi chodziło', fb:'Nie do końca — nie ma tu informacji na temat oczekiwań. Ten wzorzec świadczy o niskim zainteresowaniu samą treścią.'},{label:'😒 Nie lubi treści', fb:'Zgadza się — treść albo sposób jej przedstawienia nie przemawia do tego ucznia. Daj mu wybór w ramach celu lekcji i zgłoś taką sytuację.'},{label:'⚖️ Poziom nie pasuje', fb:'Nie do końca — nic nie wskazuje na problem z trudnością; sygnałem jest niskie zainteresowanie.'}], correctZone:1},
+   {type:'choice', prompt:`Po lekcji 1 rodzic pyta: «Co dokładnie mój syn stworzy na tym kursie?» Co robisz?`, opts:[`Mówisz, że kurs robi się ciekawszy później i że sam zobaczy`,`Opisujesz projekt końcowy i pierwsze moduły na podstawie programu kursu, szczerze mówisz, jaka część to programowanie, a jaka projektowanie, i zachęcasz do dalszych pytań`,`Obiecujesz, że pod koniec będzie mógł stworzyć dowolną grę, jaką zechce`], correct:1, fb:`Plan kursu wynika z programu kursu: co uczniowie stworzą, jaka jest droga oraz jakie są rzeczywiste proporcje programowania i projektowania. Niejasne odpowiedzi i wielkie obietnice sprawiają, że zaczyna się «to nie jest to, czego oczekiwaliśmy».`},
    {type:'choice', prompt:`Podczas diagnozy pytasz: „Czego chcesz się nauczyć?”, a uczeń odpowiada: „Rysować anime — a nie to”. Jaki jest najlepszy następny krok?`, opts:[`Wyjaśnić, że anime pojawi się później w kursie, i kontynuować dokładnie według planu`,`Tam, gdzie się da, wprowadzić jego zainteresowanie do dzisiejszej lekcji i tego samego dnia zgłosić sprawę w BO`,`Poczekać jeszcze dwie lekcje, czy to minie`], correct:1, fb:`Od razu dostosuj na lekcji, co się da, i zgłoś sprawę tego samego dnia, żeby zespół miał wszystkie możliwości. Czekanie lub bronienie planu marnuje ten czas.`},
    {type:'sort', prompt:'Gdzie na sygnalizacji świetlnej jest ta sytuacja?', card:`Dwie lekcje z rzędu: odpowiedzi jednym słowem i prośby o wcześniejsze zakończenie.`, zones:[{label:'🟢 Zielone', fb:'Nie do końca — dwie lekcje odpowiedzi jednym słowem i chęci wcześniejszego wyjścia to nie jest „wszystko w porządku”.'},{label:'🟡 Żółte', fb:'Zgadza się — zanotuj to, spróbuj elastycznej zmiany i powiedz liderowi zespołu w tym samym tygodniu. Nie czekaj, aż uczeń zacznie się klasyfikować w czerwonej kategorii.'},{label:'🔴 Czerwone', fb:'Jeszcze nie — czerwone oznacza odmowę, otwartą niechęć lub wiadomość od rodzica. Niemniej dwa razy żółta kategoria z rzędu jest już niepokojąca: powiedz o tym liderowi zespołu jeszcze w tym tygodniu.'}], correctZone:1},
   ]
@@ -215,8 +242,8 @@ const CONTENT = {
 },
 {id:'flex', numLabel:'Moduł 2', emoji:'🎛️', color:'var(--coral)',
  title:'Dopasuj kurs do ucznia — elastyczność, która zachowuje cel',
- desc:'Jak dostosować lekcję do tego, czego uczeń naprawdę chce się nauczyć, nie tracąc celu nauki, jak dawać wybór dopasowany do wieku i kiedy musi wkroczyć lider zespołu.',
- obj:'Nauczyć się dostosowywania lekcji do zainteresowań ucznia, zachowując cel nauki, dawanie wyborów dopasowanych do wieku i wiedzy, oraz kiedy elastyczne prowadzenie lekcji nie wystarcza i musi wkroczyć lider zespołu.',
+ desc:'Jak dostosować lekcję do tego, czego uczeń naprawdę chce się nauczyć, nie tracąc celu nauczania, jak oferować wybory dostosowane do wieku, kiedy musi zainterweniować Twój Team Leader oraz jak wspierać uczniów, którzy dopiero uczą się obsługi komputera.',
+ obj:'Dostosowywanie lekcji do zainteresowań ucznia przy zachowaniu celu nauczania, oferowanie wyborów odpowiednich do wieku, rozpoznawanie, kiedy elastyczność nie wystarcza i musi zainterweniować Twój Team Leader, oraz wspieranie od pierwszego modułu uczniów z niewielkimi umiejętnościami obsługi komputera.',
  sections:[
   {t:'🎯 Zasada: elastyczna droga ze stałym celem', html:`
    <div class="card"><p>Nie musisz wybierać między „trzymaj się przewodnika lekcji” a „niech robią, co chcą”. Przewodnik lekcji mówi ci, <strong>po co</strong> jest lekcja. Prawie wszystko inne można nagiąć.</p></div>
@@ -226,13 +253,11 @@ const CONTENT = {
    </div>
    ${co('co-idea','🧠',`<p><strong>Dlaczego to działa.</strong> W znanym modelu ARCS Johna Kellera (1987) zmotywowany uczeń potrzebuje czterech rzeczy: <strong>A</strong>ttention (uwagi), <strong>R</strong>elevance (istotności), <strong>C</strong>onfidence (pewności siebie) i <strong>S</strong>atisfaction (satysfakcji). Uczniowi, który mówi „to nie jest to, czego chciałem”, brakuje poczucia <em>istotności</em> — a połączenie lekcji z tym, na czym mu już zależy, to właśnie sposób, by mu je przywrócić.</p>`)}
   `},
-  {t:'🎨 Jak do tego podejść. Pięć przykładów', html:`
-   ${stepIconBlock('🎨','Illustration — „Chcę rysować tylko anime”', `<p><strong>Cel zostaje:</strong> światło, proporcje, kolor, kompozycja.<br><strong>Wersja ucznia:</strong> w każdym ćwiczeniu pojawia się postać z anime — cieniowanie twarzy postaci z anime, porównanie proporcji postaci chibi i bohatera, budowanie palety kolorów dla <em>jego</em> postaci.</p><p><em>„Super — niech dzisiejsza postać będzie twoja. Nauczymy się, jak światło pada na twarz twojej postaci.”</em></p>`)}
+  {t:'🎨 Jak do tego podejść. Cztery przykłady', html:`
+   ${stepIconBlock('🎨','Digital Creativity — „Chcę rysować tylko anime”', `<p><strong>Cel zostaje:</strong> światło, proporcje, kolor, kompozycja.<br><strong>Wersja ucznia:</strong> w każdym ćwiczeniu pojawia się postać z anime — cieniowanie twarzy postaci z anime, porównanie proporcji postaci chibi i bohatera, budowanie palety kolorów dla <em>jego</em> postaci.</p><p><em>„Super — niech dzisiejsza postać będzie twoja. Nauczymy się, jak światło pada na twarz twojej postaci.”</em></p>`)}
    ${stepIconBlock('🐍','Python — „Chcę robić gry, a nie nudny kod”', `<p><strong>Cel zostaje:</strong> zmienne, pętle, warunki.<br><strong>Wersja ucznia:</strong> mini quiz lub gra o ulubionym serialu lub grze, z użyciem dokładnie tych samych pojęć.</p><p><em>„Gra to po prostu pętle i warunki w lepszym przebraniu. Którą zbudujemy?”</em></p>`)}
    ${stepIconBlock('📖','Dowolny kurs — „Nie chcę iść za fabułą”', `<p><strong>Cel zostaje:</strong> umiejętność z lekcji.<br><strong>Wersja ucznia:</strong> pominięcie fabularnej otoczki i ćwiczenie tej samej umiejętności na własnym pomyśle, o ile uczeń nadal opanowuje główny temat lekcji.</p><p><em>„Pomińmy historię — co chcesz zrobić przy użyciu tej umiejętności?”</em></p>`)}
-   ${stepIconBlock('🧊','3D / projektowanie — „Chcę modelować własną rzecz”', `<p><strong>Cel zostaje:</strong> narzędzie i technika.<br><strong>Wersja ucznia:</strong> uczeń sam wybiera obiekt, na którym ćwiczy.</p><p><em>„Pokaż mi, co chcesz mieć w swoim pokoju — zbudujemy to dzisiejszą techniką.”</em></p>`)}
-   ${stepIconBlock('🌐','Web — „Wolę zrobić stronę na swój temat”', `<p><strong>Cel zostaje:</strong> struktura, układ, linki.<br><strong>Wersja ucznia:</strong> strona o jego klubie piłkarskim, serialu albo hobby.</p><p><em>„Wybierz temat, o którym możesz mówić godzinami — to będzie twoja strona.”</em></p>`)}
-  `},
+   ${stepIconBlock('🧊','3D / projektowanie — „Chcę modelować własną rzecz”', `<p><strong>Cel zostaje:</strong> narzędzie i technika.<br><strong>Wersja ucznia:</strong> uczeń sam wybiera obiekt, na którym ćwiczy.</p><p><em>„Pokaż mi, co chcesz mieć w swoim pokoju — zbudujemy to dzisiejszą techniką.”</em></p>`)}  `},
   {t:'🎛️ Daj menu, a nie otwarte drzwi', html:`
    <div class="card"><p>„Co chcesz robić?” to zbyt otwarte pytanie — często kończy się odpowiedzią „nie wiem”. Daj <strong>dwie lub trzy opcje, z których każda realizuje cel</strong>, i pozwól uczniowi wybrać. Mały wybór daje poczucie sprawczości; ograniczone menu utrzymuje lekcję na właściwym torze. Sposób przedstawienia tego wyboru zależy od wieku:</p></div>
    ${dimTabs([
@@ -265,7 +290,7 @@ const CONTENT = {
   {t:'🧭 Kiedy elastyczność nie wystarcza — lider zespołu i dostępne możliwości', html:`
    <div class="card"><p>Niektórych rozbieżności nie da się zniwelować na samej lekcji. To nie porażka — właśnie dlatego zgłoszenie sprawy tego samego dnia jest tak ważne. Oto sytuacje, które powinny trafić do lidera zespołu:</p></div>
    ${iconGrid([
-     {ic:'🔀', html:`<strong>Uczeń chce zupełnie innej umiejętności</strong> — na przykład gier 3D na kursie rysunku.`},
+     {ic:'🔀', html:`<strong>Uczeń chce zupełnie innej umiejętności</strong> — na przykład gier 3D na kursie Digital Creativity.`},
      {ic:'📉', html:`<strong>Twoja elastyczność pomaga na jedną lekcję, ale zainteresowanie nie wraca</strong> przez dwie lub trzy lekcje.`},
      {ic:'📢', html:`<strong>Rodzic mówi, że to nie jest kurs, który kupił.</strong> Potwierdź otrzymanie wiadomości, przed odpowiedzią przekaż sprawę liderowi zespołu i Działowi Obsługi Klienta, a słowa rodziny zapisz dosłownie w BO.`},
      {ic:'⚖️', html:`<strong>Poziom wyraźnie nie pasuje.</strong> Dostosuj teraz i zgłoś to, żeby można było rozważyć lekcję poziomującą.`}
@@ -283,20 +308,41 @@ const CONTENT = {
      ['Na początku następnej lekcji zapytaj, co uczeń chciałby stworzyć','Pokaż jego pracę grupie','Świętuj moment, w którym jego pomysł pojawia się na lekcji'],
      ['Mówienie <em>„tego nie ma w planie”</em>','Bronienie kursu zamiast słuchania','Pozwalanie, by „jego pomysł” zastąpił cel lekcji']
    )}
+  `},
+  {t:'⌨️ Gdy trudny jest sam komputer', html:`
+   <div class="card"><p>Czasem «za trudne» nie ma nic wspólnego z treścią kursu. Uczeń dopiero uczy się obsługi komputera: szukania klawiszy, przeciągania, kopiowania, przełączania okien. Każde zadanie staje się wtedy dwoma zadaniami naraz — a w pierwszym module może to sprawić, że dziecko lub rodzic uzna, że kurs «nie jest dla nich». Nad tym możesz pracować już od lekcji 1.</p></div>
+   ${symCards([
+     {ic:'🔍', title:'Na co zwracać uwagę', sub:'Na pierwszych lekcjach',
+      see:`Szuka każdego klawisza na klawiaturze · nie potrafi przeciągać, klikać prawym przyciskiem, kopiować ani wklejać · gubi się przy przełączaniu między oknami lub kartami · waha się przed udostępnieniem ekranu · rozumie ideę, ale nigdy nie kończy zadania z powodu samej <em>obsługi</em>.`,
+      tip:`Często wygląda to na powolność lub brak zainteresowania. Poproś ucznia o udostępnienie ekranu i obserwuj, <em>jak</em> pracuje, a nie tylko <em>co</em> tworzy.`},
+     {ic:'🧑‍🏫', title:'Co robisz na lekcji',
+      do:`<ul><li><strong>Pokazuj powoli, z widocznym kursorem,</strong> i komentuj każde kliknięcie: <em>«lewy górny róg, zielony przycisk».</em> Powiększaj widok podczas udostępniania ekranu.</li><li><strong>Jeden krok, a potem sprawdzenie:</strong> <em>«Pokaż mi swój ekran — w którym miejscu jesteś teraz?»</em></li><li><strong>Dwuminutowa rozgrzewka umiejętności</strong> w pierwszym module: kopiowanie i wklejanie, przeciąganie, zapisywanie, przełączanie okien.</li><li><strong>Lista skrótów na czacie:</strong> Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S, Alt+Tab (Cmd na Macu).</li><li><strong>Doceniaj także umiejętności obsługi komputera:</strong> <em>«Udało Ci się samodzielnie zapisać projekt!»</em></li></ul>`,
+      avoid:`Przejmowania kontroli nad ekranem ucznia lub wykonywania zadania za niego — rozwiązuje to problem na dziś i utwierdza ucznia w przekonaniu, że sobie nie radzi.`},
+     {ic:'👪', title:'Włącz rodzica w konfigurację',
+      do:`Przed lekcją 1 lub gdy tylko to zauważysz: poproś rodzinę o sprawdzenie, czy Chrome jest zainstalowany i aktualny, czy narzędzia kursu są zainstalowane (jeśli kurs ich wymaga) oraz czy zapisano dane logowania. W przypadku najmłodszych obecność rodzica w pobliżu na pierwszych lekcjach pomaga w konfiguracji — nie w zadaniach.`},
+     {ic:'🐢', title:'Gdy komputer działa wolno',
+      do:`<ul><li><strong>Zamknij inne programy i karty</strong> przed lekcją i używaj Google Chrome.</li><li><strong>Blender działa wolno?</strong> Wiki zawiera przewodniki konfiguracji Blendera pod kątem wydajności — wykorzystaj je, by pomóc uczniowi go ustawić; kurs zawiera też przewodnik po wydajności w pierwszych lekcjach.</li><li><strong>Jeśli komputer w ogóle nie spełnia wymagań kursu,</strong> powiedz o tym swojemu Team Leaderowi: zespoły Teaching i Sales decydują, jak uczeń będzie kontynuować naukę.</li></ul>`,
+      avoid:`Proszenia rodziny o kupno nowego komputera lub obiecywania zmiany kursu.`},
+     {ic:'📝', title:'Gdy to więcej, niż możesz rozwiązać w grupie',
+      do:`Zostaw komentarz w BO z opisem obserwacji i podjętych prób oraz poinformuj swojego Team Leadera. Możesz poprosić o dodatkową lekcję na ćwiczenie podstaw — decyduje Twój Team Leader.`,
+      avoid:`Proponowania rodzinie dodatkowej lekcji, zanim zostanie zatwierdzona.`}
+   ])}
   `}
  ],
  ix:{
   title:'Elastycznie prowadzenie lekcji bez utraty celu',
   instr:'Wybierz najlepszy ruch lub przyporządkuj każdą sytuację. 70%, aby odblokować końcową listę kontrolną.',
   items:[
-   {type:'choice', prompt:`Uczeń na kursie Illustration mówi: „Chcę rysować tylko anime”. Jaka jest najlepsza odpowiedź?`, opts:[`Powiedzieć mu, że anime nie jest częścią kursu`,`Pozwolić mu rysować w ćwiczeniach postacie z anime, ucząc przy tym światła, proporcji i koloru — i zgłosić to w BO`,`Pozwolić mu rysować, co chce, i pominąć cel lekcji`], correct:1, fb:`Cel (światło, proporcje, kolor) zostaje; postać należy do ucznia. Potem zgłoś to w BO, żeby zespół mógł rozważyć inne możliwości. Odmowa oznacza utratę ucznia; porzucenie celu — utratę nauki.`},
+   {type:'choice', prompt:`Uczeń na kursie Digital Creativity mówi: „Chcę rysować tylko anime”. Jaka jest najlepsza odpowiedź?`, opts:[`Powiedzieć mu, że anime nie jest częścią kursu`,`Pozwolić mu rysować w ćwiczeniach postacie z anime, ucząc przy tym światła, proporcji i koloru — i zgłosić to w BO`,`Pozwolić mu rysować, co chce, i pominąć cel lekcji`], correct:1, fb:`Cel (światło, proporcje, kolor) zostaje; postać należy do ucznia. Potem zgłoś to w BO, żeby zespół mógł rozważyć inne możliwości. Odmowa oznacza utratę ucznia; porzucenie celu — utratę nauki.`},
    {type:'sort', prompt:'Kto się tym zajmuje?', card:`Pozwolenie uczniowi, na wybranie motywu projektu`, zones:[{label:'✅ Mogę to zrobić samodzielnie', fb:'Zgadza się — wybór motywu w ramach celu zależy wyłącznie od ciebie i nie wymaga niczyjej zgody.'},{label:'🧭 To wymaga lidera zespołu', fb:'Nie do końca — wybór motywu, który zachowuje cel, mieści się w twoim własnym sposobie nauczania.'}], correctZone:0},
    {type:'sort', prompt:'Kto się tym zajmuje?', card:`Uczeń prosi o przejście na zupełnie inny kurs.`, zones:[{label:'✅ Mogę to zrobić samodzielnie', fb:'Nie do końca — zmiany kursu nigdy nie możesz ani obiecać, ani odmówić.'},{label:'🧭 To wymaga lidera zespołu', fb:'Zgadza się — zgłoś to w BO tego samego dnia i powiedz liderowi zespołu. Ty rekomendujesz; decyzję podejmują lider zespołu i Dział Obsługi Klienta.'}], correctZone:1},
    {type:'sort', prompt:'Kto się tym zajmuje?', card:`Rodzic pisze: „To nie jest kurs, za który zapłaciliśmy”.`, zones:[{label:'✅ Mogę to zrobić samodzielnie', fb:'Nie do końca — to najbardziej delikatna wiadomość, jaką możesz dostać. Odpowiadając samodzielnie, możesz potwierdzić skargę albo zasugerować coś, czego nie możemy zapewnić.'},{label:'🧭 To wymaga lidera zespołu', fb:'Zgadza się — potwierdź otrzymanie, przed odpowiedzią przekaż sprawę liderowi zespołu i Działowi Obsługi Klienta i zapisz słowa rodziny w BO.'}], correctZone:1},
    {type:'choice', prompt:`Siedmiolatek mówi ci, że lekcje są nudne. Która propozycja pasuje najlepiej?`, opts:[`„Zaprojektujmy razem cały projekt — jakie masz pięć założeń?”`,`„Kim ma być twoja postać — smokiem, robotem czy kotem?” i wykorzystać tę postać w dzisiejszym zadaniu`,`„Tak działa ten kurs — później ci się spodoba.”`], correct:1, fb:`Małe dzieci najlepiej wybierają spośród dwóch lub trzech konkretnych, zabawnych opcji. Otwarte założenia są dla starszych uczniów, a „później ci się spodoba” to bronienie kursu zamiast słuchania.`},
    {type:'choice', prompt:`Co oznacza „cel stały, droga elastyczna”?`, opts:[`Pominąć zadania, których uczeń nie lubi`,`Podążać wyłącznie za zainteresowaniami ucznia`,`Zmienić motyw lub zadanie, ale zachować umiejętność, której dotyczy lekcja`], correct:2, fb:`Cel i efekty z przewodnika lekcji zostają; motyw, postać, temat i kolejność można nagiąć.`},
    {type:'choice', prompt:`Uczeń pyta: „Mogę zamiast tego robić inny kurs?” Co mówisz?`, opts:[`„Tak, załatwię to dla ciebie.”`,`„Nie, już zacząłeś ten.”`,`„Super, że mi o tym mówisz. Sprawdzę z moim zespołem, co możemy zrobić — a tymczasem wykorzystajmy twój pomysł na dzisiejszej lekcji.”`], correct:2, fb:`Ani obiecywanie, ani odmawianie nie należy do ciebie — ale słuchanie, wykorzystanie pomysłu ucznia od razu i rozpoczęcie rozmowy w zespole to dokładnie twoja rola.`},
-   {type:'sort', prompt:'Czy to zachowuje cel lekcji?', card:`Celem lekcji jest technika animacji, więc uczeń animuje dowolny wybrany przez siebie obiekt.`, zones:[{label:'✅ Zachowuje cel', fb:'Zgadza się — wybór należy do ucznia, a technika nadal jest ćwiczona.'},{label:'⛔ Traci cel', fb:'Nie do końca — uczeń nadal ćwiczy technikę, której dotyczy lekcja.'}], correctZone:0}
+   {type:'sort', prompt:'Czy to zachowuje cel lekcji?', card:`Celem lekcji jest technika animacji, więc uczeń animuje dowolny wybrany przez siebie obiekt.`, zones:[{label:'✅ Zachowuje cel', fb:'Zgadza się — wybór należy do ucznia, a technika nadal jest ćwiczona.'},{label:'⛔ Traci cel', fb:'Nie do końca — uczeń nadal ćwiczy technikę, której dotyczy lekcja.'}], correctZone:0},
+   {type:'choice', prompt:`Na lekcji 2 siedmiolatek rozumie zadanie, ale nigdy go nie kończy: szuka każdego klawisza i nie potrafi kopiować ani wklejać. Co pomoże najbardziej?`, opts:[`Przejmujesz kontrolę nad jego ekranem i robisz zadanie za niego, żeby dotrzymywał kroku`,`Mówisz rodzicowi, że kurs jest dla niego zbyt zaawansowany`,`Pokazujesz powoli, z widocznym kursorem, krok po kroku, dodajesz krótką rozgrzewkę umiejętności i prosisz rodzica o sprawdzenie konfiguracji`], correct:2, fb:`Podstawowe umiejętności obsługi komputera można ćwiczyć od lekcji 1. Robienie zadania za ucznia potwierdza, że sobie nie radzi; stwierdzenie, że kurs jest «zbyt zaawansowany», nie należy do Ciebie.`},
+   {type:'sort', prompt:'Kto się tym zajmuje?', card:`Komputer ucznia w ogóle nie uruchamia Blendera, nawet po zamknięciu innych programów i zastosowaniu przewodnika po wydajności z wiki.`, zones:[{label:'✅ Mogę to zrobić sam', fb:'Niezupełnie. Swoją część masz już za sobą. Jeśli komputer nie spełnia wymagań kursu, decyzja o tym, jak uczeń będzie kontynuować naukę, nie należy do Ciebie.'},{label:'🧭 Potrzebny jest mój Team Leader', fb:'Zgadza się! Powiedz o tym swojemu Team Leaderowi: zespoły Teaching i Sales decydują, jak uczeń będzie kontynuować naukę. Nigdy nie proś rodziny o kupno komputera ani nie obiecuj zmiany kursu.'}], correctZone:1}
   ]
  }
 },
@@ -324,7 +370,12 @@ const CONTENT = {
      'Nigdy nie obiecuję zmiany kursu, poziomu ani dodatkowej lekcji — rekomenduję w BO i mówię „sprawdzę z moim zespołem”',
      'Nie bronię kursu i nie mówię, że „później będzie lepiej” — najpierw słucham, potem dostosowuję',
      'Gdy rodzic mówi, że kurs nie spełnia oczekiwań, potwierdzam otrzymanie wiadomości, przed odpowiedzią przekazuję sprawę liderowi zespołu i Działowi Obsługi Klienta i zapisuję słowa rodzica w BO',
-     'Świętuję moment, w którym własny pomysł ucznia pojawia się na lekcji, i pokazuję jego pracę grupie'
+     'Świętuję moment, w którym własny pomysł ucznia pojawia się na lekcji, i pokazuję jego pracę grupie',
+     'Na pierwszych lekcjach pokazuję plan kursu: co uczniowie stworzą, jaka część to programowanie, a jaka projektowanie, oraz jak wykorzystuje się narzędzia AI, jeśli kurs z nich korzysta',
+     'Po lekcjach 1–2 wysyłam rodzicowi krótką wiadomość o planie kursu, opartą na programie kursu — nigdy nie obiecując projektów ani efektów, których kurs nie obejmuje',
+     'Gdy uczeń dopiero uczy się obsługi komputera, pokazuję powoli z widocznym kursorem, daję jeden krok naraz i dodaję krótką rozgrzewkę umiejętności',
+     'Proszę rodzica o pomoc w konfiguracji (Chrome, narzędzia kursu, logowanie) — nie w zadaniach',
+     'Jeśli komputer działa wolno, pomagam uczniowi zamknąć inne programy i korzystam z przewodników po wydajności Blendera z wiki; jeśli nie uruchomi kursu, informuję swojego Team Leadera'
    ])}
   `},
   {t:'', html:`

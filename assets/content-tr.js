@@ -22,7 +22,7 @@ const CONTENT = {
     heroEyebrow:"🎯 Mini Eğitim",
     heroTitle:"<span class=\"h-pill\">Beklenti</span> Farkını Kapatmak",
     heroIntro:"Bu eğitimi, kurs beklentilerini karşılamadığı, istedikleri gibi olmadığı ya da içeriğini sevmedikleri için iade talep eden öğrencileriniz olduğu için alıyorsunuz. Burada, bir eğitmen olarak neler yapabileceğinizi ve bu tür durumları nasıl yöneteceğinizi göstereceğiz.",
-    heroWork:"4 kısa modülü tamamlayın. Bir sonraki modülün kilidini açmak için her modül kontrolünde en az %70 almanız gerekir. Toplam süre yaklaşık 20–25 dakikadır.",
+    heroWork:"4 kısa modülü tamamlayın. Bir sonraki modülün kilidini açmak için her modül değerlendirmesinde en az %70 almanız gerekir. Toplam süre yaklaşık 30–35 dakikadır.",
     startBtn:"🚀 Eğitimi Başlat",
     pathLabel:'Öğrenme Yolunuz',
     devTitle:'Geliştirici: inceleme için tüm modüllerin kilidini aç',
@@ -135,8 +135,8 @@ const CONTENT = {
 },
 {id:'spot', numLabel:'Modül 1', emoji:'🔎', color:'var(--coral)',
  title:'Farkı Erken Fark Edin — ve Aynı Gün Bildirin',
- desc:'Uyumsuzluğun aldığı üç biçim, ilk dersler için hızlı bir tespit yöntemi, her ders için bir trafik ışığı kontrolü ve durumu BO’da nasıl bildireceğiniz.',
- obj:'Ne tür bir uyumsuzlukla karşı karşıya olduğunuzu tanımak, hızlı bir tespit yapmak, işaretleri ders ders okumak ve durumu aynı gün BO’da bildirmek.',
+ desc:'Uyumsuzluğun aldığı üç biçim, ilk dersler için hızlı bir teşhis, kurs yol haritasının öğrenciye ve veliye nasıl gösterileceği, her ders için trafik ışığı kontrolü ve bunun BO’da nasıl bildirileceği.',
+ obj:'Hangi tür uyumsuzlukla karşı karşıya olduğunuzu fark etmek, hızlı bir teşhis yapmak, kurs yol haritasını erkenden açıklamak (öğrencilerin neler oluşturacağı, kodlama ile tasarım ve yapay zekâ araçlarının nasıl kullanıldığı), sinyalleri ders ders okumak ve durumu aynı gün BO’da bildirmek.',
  sections:[
   {t:'🧭 Uyumsuzluğun üç biçimi', html:`
    <div class="card"><p>“Bu kursu sevmiyorum” üç farklı anlama gelebilir — ve her biri biraz farklı bir hamle gerektirir. Bunları birbirinden ayırt etmeyi öğrenin.</p></div>
@@ -153,6 +153,34 @@ const CONTENT = {
    ${stepIconBlock('⚖️','“Bugün hangi kısım kolay geldi, hangisi zor geldi?”', `<p>Bunu ilk alıştırmadan sonra sorun. Seviyeyle gerçekte ne kadar rahat olduğunu ölçmenize yardımcı olur.</p><p>✅ <strong>İdeal:</strong> “ilk kısım kolaydı, ikincisi zordu” — seviye doğru.<br>⚠️ <strong>Dikkat edin:</strong> “hepsi kolaydı” ya da “hiçbirini anlamadım.”</p>`)}
    ${stepIconBlock('✏️','Kısa, bireysel bir alıştırma (5–8 dakika)', `<p>Öğrenciden modülün ilk alıştırmasını yardım almadan, kendi başına tamamlamasını isteyin. Ne kadar sürdüğüne ve başlayabilip başlayamadığına dikkat edin.</p><p>✅ <strong>Normal:</strong> biraz yönlendirmeye ihtiyaç duyar ve beklenen sürede bitirir.<br>⚠️ <strong>Dikkat edin:</strong> hemen bitiriyor ya da kendi başına başlayamıyor.</p>`)}
    ${co('co-idea','💡',`<p><strong>2. dersi zaten geçtiniz mi?</strong> Aynı soruları bu hafta sorun. Bu tespit kursun herhangi bir noktasında işe yarar — ne kadar erken sorarsanız, o kadar çok seçenek açık kalır.</p>`)}
+  `},
+  {t:'🗺️ Yol haritasını gösterin: öğrenciye ve veliye', html:`
+   <div class="card"><p>«Beklediğimiz bu değildi» şeklindeki pek çok durum, aile sizinle tanışmadan önce oluşan bir izlenimle başlar: satış görüşmesinde, deneme dersinde ya da bir reklamda. İlk dersleriniz <strong>gerçek kursu</strong> göstermek için ilk fırsattır: kursun nereye gittiğini, öğrencilerin neler oluşturacağını ve nasıl işlediğini. Yolu bilen bir aile, daha sonra bunun karşısında şaşırma ihtimali çok daha düşüktür.</p></div>
+   ${patternCards([
+     {ic:'🏗️', title:'Neler oluşturacaklar', desc:'Son proje ve yol boyunca modül modül oluşturdukları şeyler.', note:'<em>«Bu modülün sonunda şunlara sahip olacaksın…»</em> ifadesi temel konuları geçmek için bir neden sunar.'},
+     {ic:'⚖️', title:'Kodlama, tasarım — veya ikisi birden', desc:'Kursun ne kadarının kod yazmak, ne kadarının görsel olarak çizmek, tasarlamak veya inşa etmek olduğu.', note:'Dengeyi dürüstçe anlatın. Kodlama kursunda çizim yapmayı bekleyen bir çocuğun bunu erkenden bilmesi gerekir.'},
+     {ic:'🤖', title:'Yapay zekâ araçları nasıl kullanılır', desc:'Kurs yapay zekâ araçları kullanıyorsa: ne için kullanıldıkları ve öğrencinin hâlâ kendisinin yaptığı şeyler.', note:'Bunu kurs programının anlattığı şekilde açıklayın — ne fazla, ne eksik.'}
+   ],3)}
+   ${co('co-idea','📘',`<p><strong>Nerede bulunur:</strong> Kurs programı ve BO’daki ders kılavuzları modülleri, projeleri ve araçları gösterir. Bunları 1. dersten önce inceleyin. Kursun yapay zekâyı nasıl kullandığından veya ne kadarının kodlama olduğundan emin değil misiniz? Takım Liderinize sorun (gerekirse #menap-teaching-and-techsupport Slack kanalına o yazar) — bir ailenin önünde asla tahmin yürütmeyin.</p>`)}
+   ${dimTabs([
+     {ic:'🧒', title:'Öğrenciyle',
+      intro:'Listelemeyin, gösterin. Tamamlanmış bir örnek, bir müfredattan daha fazlasını anlatır.',
+      tips:[
+       {ic:'🎬', html:`<strong>İlk derste kursun neler oluşturduğuna dair tamamlanmış bir örnek gösterin:</strong> <em>«Bunu yapabileceksin.»</em>`},
+       {ic:'🧭', html:`<strong>Yolu işaretleyin:</strong> her modülün başında, bunun son projeye ne kattığını söyleyin.`},
+       {ic:'🔗', html:`<strong>Temel konuları hedefe bağlayın:</strong> <em>«Bugünkü döngü, karakterinin ileride kendi kendine hareket etmesini sağlayacak olan şeydir.»</em>`},
+       {ic:'🤖', html:`<strong>Yapay zekâ araçları kullanılıyorsa,</strong> neye yardımcı olduklarını ve hangi kısmın öğrencinin kendi işi olarak kaldığını söyleyin.`}
+      ]},
+     {ic:'👪', title:'Veliyle',
+      intro:'İlk dersten sonra gönderilen kısa bir mesaj sürprizlerin çoğunu önler.',
+      tips:[
+       {ic:'📨', html:`<strong>1–2. derslerden sonra gönderin:</strong> kursun neler oluşturduğu, ilk modüllerin neleri kapsadığı ve kodlama ile tasarım dengesi.`},
+       {ic:'🗓️', html:`<strong>İlk haftaların nasıl göründüğünü anlatın:</strong> önce temel konular, sonra daha büyük projeler.`},
+       {ic:'🙋', html:`<strong>İçerikle ilgili soruları teşvik edin</strong> — ve farklı bir şey bekliyorlarsa aynı gün BO’da bildirin.`},
+       {ic:'🚫', html:`<strong>Abartmayın.</strong> Kursun içermediği projeleri, araçları veya sonuçları asla anlatmayın.`}
+      ]}
+   ],'✅ Öğrenci ve veli konusu bu kadar.')}
+   ${co('co-cute','😟',`<p><strong>Bir veli, modül veya ders etkinliğinin beklentilerini karşılamaması nedeniyle rahatsızsa.</strong> Önce onu dinleyin. Ardından sonraki modüllerde hangi konuların işleneceğini açıklayın (kurs programını kontrol edin) ve etkinliğin hikâyesinin veya temasının çocuğun ilgi alanlarına göre uyarlanabileceğini, ancak kullanılan araçların ve edinilen bilgilerin aynı kalacağını belirtin. Birden fazla araç kullanılan kurslarda, aynı görevi farklı bir programla yapma esnekliği sunun. Wiki ve öğretmen notlarında birçok görev için alternatifler listelenmiştir. Aile kurs kapsamında olmayan bir şey istiyorsa bunu BO’ya bildirin ve Takım Liderinize haber verin. Kurs değişikliği yapacağınıza asla söz vermeyin.</p>`)}
   `},
   {t:'🚥 Her derste okumaya devam edin', html:`
    <div class="card"><p>İlk derslerden sonra, her dersin ardından yapacağınız basit bir trafik ışığı kontrolü sizi gerçekçi tutar. Otuz saniye sürer.</p></div>
@@ -182,7 +210,7 @@ const CONTENT = {
      ]}
    ])}
    <div class="card" style="background:var(--surface2)"><h4>📨 Faydalı bir bildirim nasıl görünür — kopyalayıp doldurun</h4>
-   <p style="font-size:13.5px;line-height:1.75"><strong>Öğrenci:</strong> [ad] · <strong>Kurs / seviye:</strong> [örn. İllüstrasyon, 1. seviye] · <strong>Ders:</strong> [M1L2 — tarih]<br>
+   <p style="font-size:13.5px;line-height:1.75"><strong>Öğrenci:</strong> [ad] · <strong>Kurs / seviye:</strong> [örn. Paper Drawing, 1. seviye] · <strong>Ders:</strong> [M1L2 — tarih]<br>
    <strong>Gözlemlediğim:</strong> [2–3 satır: işaret, an, öğrencinin kendi sözleri]<br>
    <strong>Bence arkasındaki neden:</strong> ☐ beklediği gibi değil &nbsp; ☐ içeriği sevmiyor &nbsp; ☐ seviye uygun gelmiyor<br>
    <strong>Derste zaten denediklerim:</strong> [örn. karakter temasını kendisinin seçmesine izin verdim]<br>
@@ -196,8 +224,6 @@ const CONTENT = {
      ['Öğrenmeyle ilgili fark ettiklerinizi paylaşın: <em>“Karakter çizerken gözlerinin içi gülüyor — bunu derslerimize dahil ediyorum.”</em>','Konuyu ekibinizle paylaştığınızı ve onlara geri döneceğinizi söyleyin','Çocuklarının bu kurstan ne kazanmasını istediklerini sorun','Size bunu anlattıkları için teşekkür edin — sıcak bir dille ve aynı gün'],
      ['Başka bir kurs, seviye değişikliği veya iadeyi kendinizin önermesi','Kursu savunmak: <em>“ileride daha güzel olacak”</em>','Bir ders veya değişiklik vaat etmek','<em>“Bu kursu sevmedi”</em> demek — bir başarısızlık gibi duyulur']
    )}
-   <div class="card" style="background:var(--surface2)"><h4>📨 Takım Lideriniz bir öneriyi onayladığında — bunu bir fırsat olarak sunun</h4>
-   <p style="font-size:13.5px;line-height:1.75"><em>“Merhaba [velinin adı], ben [adınız], [öğrenci]’nin eğitmeniyim. [Öğrenci]’nin çok fazla potansiyeli olduğunu fark ettim, ancak ilk derslerde bu kursun odağının tam olarak hayal ettiği şey olmadığını hissettim — [örn. sadece kod yazmak değil, oyun yapmak istediğinden bahsetti]. [Öğrenci]’nin Kodland’deki zamanından keyif almasını ve en iyi şekilde yararlanmasını istiyorum; bu yüzden ekibimizle birlikte [başka bir kurs]’un ona daha uygun olup olmayacağını değerlendirmek istiyoruz. Size daha fazla bilgi verebilmem için bu hafta birkaç dakikanız olur mu?”</em></p></div>
    ${co('co-idea','💡',`<p><strong>Şunu söyleyin:</strong> “onun daha da çok sevebileceği bir şey bulduk” — <strong>asla</strong> “bu kursu sevmedi” demeyin.</p>`)}
   `}
  ],
@@ -208,6 +234,7 @@ const CONTENT = {
    {type:'sort', prompt:'Bu, uyumsuzluğun hangi biçimi?', card:`“Sadece kod yazacağımızı değil, oyun yapacağımızı sanıyordum.”`, zones:[{label:'🎯 Beklediğim bu değildi', fb:'Doğru — beklenti kurstan farklıydı. Esneklik bu farkın bir kısmını kapatabilir; bildirim ise diğer seçenekleri açık tutar.'},{label:'😒 İçeriği sevmiyor', fb:'Tam değil — bu öğrencinin yapmayı beklediği belirli bir şey var. Bu, “beklediğim bu değildi” türünde bir farktır.'},{label:'⚖️ Seviye uygun gelmiyor', fb:'Tam değil — burada zorlukla ilgili hiçbir şey yok. Mesele, ne yapmayı beklediğiyle ilgili.'}], correctZone:0},
    {type:'sort', prompt:'Bu, uyumsuzluğun hangi biçimi?', card:`“Hepsi çok kolaydı — bunu zaten biliyorum.”`, zones:[{label:'🎯 Beklediğim bu değildi', fb:'Tam değil — bu öğrenci konudan değil, zorluktan bahsediyor.'},{label:'😒 İçeriği sevmiyor', fb:'Tam değil — içerikten sıkılmış gibi görünse de sorun seviyededir.'},{label:'⚖️ Seviye uygun gelmiyor', fb:'Doğru — sevmeme gibi görünüyor ama sorun seviye. Hemen uyarlayın ve seviye dersi için durumu bildirin.'}], correctZone:2},
    {type:'sort', prompt:'Bu, uyumsuzluğun hangi biçimi?', card:`Her derste alıştırmaları yalnızca mecbur olduğu için yapıyor, “bilmem” diye cevap veriyor ve dersi erken bitirmek istiyor.`, zones:[{label:'🎯 Beklediğim bu değildi', fb:'Tam değil — ne beklediğini söylemedi. Bu tablo, içeriğin kendisine duyulan düşük ilgiyle ilgili.'},{label:'😒 İçeriği sevmiyor', fb:'Doğru — içerik ya da sunuluş biçimi ona hitap etmiyor. Hedefin içinde seçenekler sunun ve durumu bildirin.'},{label:'⚖️ Seviye uygun gelmiyor', fb:'Tam değil — zorlukla ilgili bir sorun görünmüyor; işaret düşük ilgi.'}], correctZone:1},
+   {type:'choice', prompt:`1. dersten sonra bir veli şunu soruyor: «Oğlum bu kursta tam olarak ne yapacak?» Ne yaparsınız?`, opts:[`Kursun ilerleyen zamanlarda daha eğlenceli hâle geleceğini ve göreceklerini söylersiniz`,`Kurs programına dayanarak son projeyi ve ilk modülleri anlatır, ne kadarının kodlama ne kadarının tasarım olduğunu dürüstçe söyler ve daha fazla soru sormaya davet edersiniz`,`Sonunda istediği her oyunu yapabileceğine söz verirsiniz`], correct:1, fb:`Yol haritası kurs programından gelir: öğrencilerin neler oluşturacağı, izlenecek yol ve kodlama ile tasarımın gerçek dengesi. Belirsiz cevaplar ve büyük vaatler, «beklediğimiz bu değildi» düşüncesinin başladığı yerdir.`},
    {type:'choice', prompt:`Tespit sırasında “Ne öğrenmeyi bekliyordun?” diye soruyorsunuz ve öğrenci şöyle diyor: “Anime çizmeyi — bunu değil.” En iyi sonraki adım nedir?`, opts:[`Animenin kursta daha sonra geleceğini açıklayıp tam planlandığı gibi devam etmek`,`Mümkün olduğunca onun ilgisini bugünkü derse taşımak ve aynı gün BO’da bildirmek`,`Geçip geçmeyeceğini görmek için iki ders daha beklemek`], correct:1, fb:`Derste esnetebileceğiniz şeyleri hemen esnetin ve ekibin tüm seçenekleri hâlâ elindeyken aynı gün bildirin. Beklemek ya da planı savunmak, bu fırsat penceresini harcar.`},
    {type:'sort', prompt:'Bu durum trafik ışığında nereye düşer?', card:`Üst üste iki ders: tek kelimelik cevaplar ve dersi erken bitirme isteği.`, zones:[{label:'🟢 Yeşil', fb:'Tam değil — iki ders boyunca tek kelimelik cevaplar ve erken ayrılma isteği “her şey yolunda” anlamına gelmez.'},{label:'🟡 Sarı', fb:'Doğru — not alın, esnek bir değişiklik deneyin ve aynı hafta Takım Liderinize haber verin. Kırmızıyı beklemeyin.'},{label:'🔴 Kırmızı', fb:'Henüz değil — kırmızı; reddetme, açıkça sevmediğini söyleme ya da velinin yazması demektir. Ancak üst üste iki sarı da zaten şu anlama gelir: bu hafta Takım Liderinize haber verin.'}], correctZone:1},
   ]
@@ -215,8 +242,8 @@ const CONTENT = {
 },
 {id:'flex', numLabel:'Modül 2', emoji:'🎛️', color:'var(--coral)',
  title:'Kursu Öğrenciye Uydurun — Hedefi Koruyan Esneklik',
- desc:'Öğrenme hedefini kaybetmeden bir dersi öğrencinin gerçekten öğrenmek istediği şeye nasıl uyarlayacağınız, yaşa göre nasıl seçenekler sunacağınız ve Takım Liderinizin ne zaman devreye girmesi gerektiği.',
- obj:'Öğrenme hedefini koruyarak bir dersi öğrencinin ilgi alanlarına uyarlamak, yaşına uygun seçenekler sunmak ve esnekliğin ne zaman yetmediğini, Takım Liderinizin ne zaman devreye girmesi gerektiğini bilmek.',
+ desc:'Öğrencinin gerçekten öğrenmek istediği şeye öğrenme hedefini kaybetmeden bir dersi nasıl uyarlayacağınız, yaşa göre seçenekleri nasıl sunacağınız, Takım Liderinizin ne zaman devreye girmesi gerektiği ve bilgisayar kullanmayı hâlâ öğrenen öğrencileri nasıl destekleyeceğiniz.',
+ obj:'Öğrenme hedefini koruyarak bir dersi öğrencinin ilgi alanlarına göre uyarlamak, yaşına uygun seçenekler sunmak, esnekliğin ne zaman yetmediğini ve Takım Liderinizin ne zaman devreye girmesi gerektiğini bilmek ve bilgisayar becerileri zayıf öğrencileri ilk modülden itibaren desteklemek.',
  sections:[
   {t:'🎯 Kural: hedefi koruyun, yolu esnetin', html:`
    <div class="card"><p>“Kılavuzu takip etmek” ile “ne isterlerse yapmalarına izin vermek” arasında seçim yapmak zorunda değilsiniz. Kılavuz, dersin <strong>ne için</strong> olduğunu söyler. Geri kalan neredeyse her şey esnetilebilir.</p></div>
@@ -227,7 +254,7 @@ const CONTENT = {
    ${co('co-idea','🧠',`<p><strong>Neden işe yarar?</strong> John Keller’ın bilinen ARCS modeline (1987) göre, motive bir öğrencinin dört şeye ihtiyacı vardır: Dikkat (<strong>A</strong>ttention), Uygunluk (<strong>R</strong>elevance), Güven (<strong>C</strong>onfidence) ve Doyum (<strong>S</strong>atisfaction). “İstediğim bu değildi” diyen bir öğrencide eksik olan <em>Uygunluk</em>tur — dersi onun zaten önem verdiği şeylerle ilişkilendirmek de bunu ona geri kazandırmanın tam yoludur.</p>`)}
   `},
   {t:'🎨 Pratikte şöyle görünür — beş gerçek örnek', html:`
-   ${stepIconBlock('🎨','İllüstrasyon — “Sadece anime çizmek istiyorum”', `<p><strong>Hedef aynı kalır:</strong> ışık, oran, renk, kompozisyon.<br><strong>Onun dokunuşu:</strong> her alıştırmada bir anime karakteri kullanılır — bir anime yüzünü gölgelendirmek, bir chibi ile bir kahramanın oranlarını karşılaştırmak, <em>kendi</em> karakteri için bir renk paleti oluşturmak.</p><p><em>“Bayıldım — bugünkü karakter senin olsun. Işığın karakterinin yüzünde nasıl çalıştığını öğreneceğiz.”</em></p>`)}
+   ${stepIconBlock('🎨','Paper Drawing — “Sadece anime çizmek istiyorum”', `<p><strong>Hedef aynı kalır:</strong> ışık, oran, renk, kompozisyon.<br><strong>Onun dokunuşu:</strong> her alıştırmada bir anime karakteri kullanılır — bir anime yüzünü gölgelendirmek, bir chibi ile bir kahramanın oranlarını karşılaştırmak, <em>kendi</em> karakteri için bir renk paleti oluşturmak.</p><p><em>“Bayıldım — bugünkü karakter senin olsun. Işığın karakterinin yüzünde nasıl çalıştığını öğreneceğiz.”</em></p>`)}
    ${stepIconBlock('🐍','Python — “Sıkıcı kod değil, oyun yapmak istiyorum”', `<p><strong>Hedef aynı kalır:</strong> değişkenler, döngüler, koşullar.<br><strong>Onun dokunuşu:</strong> tam olarak aynı kavramları kullanarak en sevdiği dizi veya oyun hakkında küçük bir bilgi yarışması ya da oyun.</p><p><em>“Oyun dediğin, daha havalı kostüm giymiş döngüler ve koşullardan ibaret. Hangisini yapalım?”</em></p>`)}
    ${stepIconBlock('📖','Herhangi bir kurs — “Hikâyeyi takip etmek istemiyorum”', `<p><strong>Hedef aynı kalır:</strong> dersin becerisi.<br><strong>Onun dokunuşu:</strong> dersin temel konusunu öğrendiği sürece hikâye kurgusunu bırakıp aynı beceriyi kendi fikri üzerinde uygular.</p><p><em>“Hikâyeyi boş verelim — bu beceriyle ne yapmak isterdin?”</em></p>`)}
    ${stepIconBlock('🧊','3D / tasarım — “Kendi istediğim şeyi modellemek istiyorum”', `<p><strong>Hedef aynı kalır:</strong> araç ve teknik.<br><strong>Onun dokunuşu:</strong> üzerinde çalışacağı nesneyi kendisi seçer.</p><p><em>“Odanda olmasını çok isteyeceğin bir şey göster — onu bugünkü teknikle yapalım.”</em></p>`)}
@@ -283,20 +310,41 @@ const CONTENT = {
      ['Bir sonraki dersin başında ne yapmak istediğini sorun','Çalışmasını grupla paylaşın','Fikrinin derste yer bulduğu anı kutlayın'],
      ['<em>“Bu planda yok”</em> demek','Dinlemek yerine kursu savunmak','“Onun fikrinin” dersin hedefinin yerini almasına izin vermek']
    )}
+  `},
+  {t:'⌨️ Zor olan bilgisayarın kendisi olduğunda', html:`
+   <div class="card"><p>Bazen «çok zor» olmasının kurs içeriğiyle hiçbir ilgisi yoktur. Öğrenci hâlâ bilgisayar kullanmayı öğreniyordur: tuşları bulmak, sürüklemek, kopyalamak, pencereler arasında geçiş yapmak. O zaman her görev aynı anda iki göreve dönüşür — ve ilk modülde bu, bir çocuğun ya da velinin kursun «kendilerine göre olmadığına» karar vermesine yol açabilir. Bu, 1. dersten itibaren üzerinde çalışabileceğiniz bir konudur.</p></div>
+   ${symCards([
+     {ic:'🔍', title:'Dikkat edilecek işaretler', sub:'İlk derslerde',
+      see:`Klavyede her tuşu arar · sürükleyemez, sağ tıklayamaz, kopyalayıp yapıştıramaz · pencereler veya sekmeler arasında geçiş yaparken kaybolur · ekranını paylaşmakta tereddüt eder · fikri anlar ama <em>nasıl</em> yapılacağı yüzünden görevi asla bitiremez.`,
+      tip:`Çoğu zaman yavaşlık ya da ilgisizlik gibi görünür. Ekranını paylaşmasını isteyin ve yalnızca <em>ne</em> ürettiğine değil, <em>nasıl</em> çalıştığına da bakın.`},
+     {ic:'🧑‍🏫', title:'Derste ne yaparsınız',
+      do:`<ul><li><strong>Yavaş yavaş gösterin, imlecinizi görünür tutun</strong> ve her tıklamayı anlatın: <em>«sol üstte, yeşil düğme».</em> Ekran paylaşırken yakınlaştırın.</li><li><strong>Bir adım, ardından kontrol:</strong> <em>«Ekranını bana göster — şu anda neredesin?»</em></li><li><strong>İlk modülde iki dakikalık bir beceri ısınması:</strong> kopyalama ve yapıştırma, sürükleme, kaydetme, pencere değiştirme.</li><li><strong>Sohbette bir kısayol listesi:</strong> Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S, Alt+Tab (Mac’te Cmd).</li><li><strong>Bilgisayar becerilerini de takdir edin:</strong> <em>«Projeni tek başına kaydettin!»</em></li></ul>`,
+      avoid:`Ekranın kontrolünü almak veya görevi onun yerine yapmak — bu, bugünkü sorunu çözer ama yapamadığını doğrular.`},
+     {ic:'👪', title:'Veliyi kuruluma dahil edin',
+      do:`1. dersten önce veya fark eder etmez: aileden Chrome’un yüklü ve güncel olduğunu, kursun gerektirdiği araçların yüklü olduğunu ve oturum bilgilerinin kayıtlı olduğunu kontrol etmesini isteyin. En küçük öğrencilerde, ilk derslerde bir velinin yakında olması kuruluma yardımcı olur — görevlere değil.`},
+     {ic:'🐢', title:'Bilgisayar yavaş olduğunda',
+      do:`<ul><li><strong>Dersten önce diğer programları ve sekmeleri kapatın</strong> ve Google Chrome kullanın.</li><li><strong>Blender yavaş mı çalışıyor?</strong> Wiki’de Blender’ı daha iyi performans için yapılandırma kılavuzları var — öğrencinin ayarlarını yapmasına yardımcı olmak için bunları kullanın; ayrıca kursun ilk derslerinde bir performans kılavuzu da yer alır.</li><li><strong>Bilgisayar kurs gereksinimlerini hiç karşılamıyorsa</strong> Takım Liderinize söyleyin: öğrencinin nasıl devam edeceğine Teaching ve Sales ekipleri karar verir.</li></ul>`,
+      avoid:`Aileden yeni bir bilgisayar almasını istemek veya kurs değişikliği sözü vermek.`},
+     {ic:'📝', title:'Grup içinde çözebileceğinizden fazlası olduğunda',
+      do:`BO’ya gördüklerinizi ve denediklerinizi içeren bir yorum bırakın ve Takım Liderinize haber verin. Temel konuları pekiştirmek için ek ders talep edebilirsiniz — kararı Takım Lideriniz verir.`,
+      avoid:`Onaylanmadan önce aileye ek ders teklif etmek.`}
+   ])}
   `}
  ],
  ix:{
   title:'Esnetin — hedefi kaybetmeden',
   instr:'En iyi hamleyi seçin veya her durumu sınıflandırın. Son kontrol listesinin kilidini açmak için %70 gerekir.',
   items:[
-   {type:'choice', prompt:`İllüstrasyon kursundaki bir öğrenci şöyle diyor: “Sadece anime çizmek istiyorum.” En iyi cevap nedir?`, opts:[`Animenin kursun bir parçası olmadığını söylemek`,`Işık, oran ve rengi öğretirken alıştırmalarda anime karakterleri çizmesine izin vermek — ve durumu BO’da bildirmek`,`İstediği her şeyi çizmesine izin verip dersin hedefini atlamak`], correct:1, fb:`Hedef (ışık, oran, renk) aynı kalır; karakter onundur. Ardından ekibin başka seçenekleri de değerlendirebilmesi için durumu BO’da bildirin. Reddetmek öğrenciyi kaybettirir; hedefi bırakmak ise öğrenmeyi.`},
+   {type:'choice', prompt:`Paper Drawing kursundaki bir öğrenci şöyle diyor: “Sadece anime çizmek istiyorum.” En iyi cevap nedir?`, opts:[`Animenin kursun bir parçası olmadığını söylemek`,`Işık, oran ve rengi öğretirken alıştırmalarda anime karakterleri çizmesine izin vermek — ve durumu BO’da bildirmek`,`İstediği her şeyi çizmesine izin verip dersin hedefini atlamak`], correct:1, fb:`Hedef (ışık, oran, renk) aynı kalır; karakter onundur. Ardından ekibin başka seçenekleri de değerlendirebilmesi için durumu BO’da bildirin. Reddetmek öğrenciyi kaybettirir; hedefi bırakmak ise öğrenmeyi.`},
    {type:'sort', prompt:'Bununla kim ilgilenir?', card:`Proje temasını öğrencinin seçmesine izin vermek.`, zones:[{label:'✅ Bunu kendim yapabilirim', fb:'Doğru — hedefin içinde bir tema seçmek tamamen sizin elinizdedir ve izin gerektirmez.'},{label:'🧭 Takım Liderimin devreye girmesi gerekir', fb:'Tam değil — hedefi koruyan bir tema seçimi sizin ders anlatımınızın kapsamındadır.'}], correctZone:0},
    {type:'sort', prompt:'Bununla kim ilgilenir?', card:`Öğrenci tamamen farklı bir kursa geçmek istiyor.`, zones:[{label:'✅ Bunu kendim yapabilirim', fb:'Tam değil — kurs değişikliğini vaat etmek ya da reddetmek asla size ait değildir.'},{label:'🧭 Takım Liderimin devreye girmesi gerekir', fb:'Doğru — aynı gün BO’da bildirin ve Takım Liderinize haber verin. Siz önerirsiniz; karar onlarındır ve Müşteri Hizmetleri’nindir.'}], correctZone:1},
    {type:'sort', prompt:'Bununla kim ilgilenir?', card:`Bir veli şöyle yazıyor: “Bu, ödemesini yaptığımız kurs değil.”`, zones:[{label:'✅ Bunu kendim yapabilirim', fb:'Tam değil — bu, alabileceğiniz en hassas mesajdır. Tek başınıza cevap vermek bir şikâyeti doğrulayabilir ya da sunamayacağımız bir şeyi ima edebilir.'},{label:'🧭 Takım Liderimin devreye girmesi gerekir', fb:'Doğru — mesajı aldığınızı belirtin, cevap vermeden önce konuyu Takım Liderinize ve Müşteri Hizmetleri’ne iletin ve ailenin sözlerini BO’ya kaydedin.'}], correctZone:1},
    {type:'choice', prompt:`7 yaşında bir çocuk derslerin sıkıcı olduğunu söylüyor. Hangi teklif en uygun?`, opts:[`“Bütün projeyi birlikte tasarlayalım — beş maddelik görev tanımın ne?”`,`“Karakterin ne olsun — ejderha mı, robot mu, kedi mi?” diye sorup o karakteri bugünkü görevde kullanmak`,`“Kurs böyle işliyor — ileride seveceksin.”`], correct:1, fb:`Küçük çocuklar en iyi, iki veya üç somut ve oyun gibi seçenek arasından seçim yapar. Açık bir görev tanımı daha büyük öğrenciler içindir; “ileride seveceksin” demek ise dinlemek yerine kursu savunmaktır.`},
    {type:'choice', prompt:`“Hedefi koruyun, yolu esnetin” ne anlama gelir?`, opts:[`Öğrencinin sevmediği görevleri atlamak`,`Yalnızca öğrencinin ilgi alanlarını takip etmek`,`Temayı veya görevi değiştirmek, ama dersin amacı olan beceriyi korumak`], correct:2, fb:`Kılavuzdaki hedef ve kazanımlar aynı kalır; tema, karakter, konu ve sıra esnetilebilir.`},
    {type:'choice', prompt:`Bir öğrenci soruyor: “Bunun yerine başka bir kursa geçebilir miyim?” Ne söylersiniz?`, opts:[`“Evet, senin için ayarlarım.”`,`“Hayır, bu kursa zaten başladın.”`,`“Bunu bana söylemene çok sevindim. Neler yapabileceğimizi ekibime soracağım — bu arada senin fikrini bugünkü derste kullanalım.”`], correct:2, fb:`Vaat etmek de reddetmek de size ait değildir — ama dinlemek, fikrini hemen kullanmak ve ekip içindeki konuşmayı başlatmak tam olarak sizin işinizdir.`},
-   {type:'sort', prompt:'Bu, öğrenme hedefini koruyor mu?', card:`Dersin hedefi animasyon tekniği olduğu için öğrenci kendi seçtiği herhangi bir nesneyi canlandırıyor.`, zones:[{label:'✅ Hedefi koruyor', fb:'Doğru — seçim onun, teknik ise yine uygulanıyor.'},{label:'⛔ Hedefi kaybettiriyor', fb:'Tam değil — dersin amacı olan tekniği hâlâ uyguluyor.'}], correctZone:0}
+   {type:'sort', prompt:'Bu, öğrenme hedefini koruyor mu?', card:`Dersin hedefi animasyon tekniği olduğu için öğrenci kendi seçtiği herhangi bir nesneyi canlandırıyor.`, zones:[{label:'✅ Hedefi koruyor', fb:'Doğru — seçim onun, teknik ise yine uygulanıyor.'},{label:'⛔ Hedefi kaybettiriyor', fb:'Tam değil — dersin amacı olan tekniği hâlâ uyguluyor.'}], correctZone:0},
+   {type:'choice', prompt:`2. derste 7 yaşındaki bir öğrenci görevi anlıyor ama hiçbir zaman bitiremiyor: her tuşu arıyor ve kopyalayıp yapıştıramıyor. En çok ne yardımcı olur?`, opts:[`Ekranın kontrolünü alır ve onun yerine yaparsınız, böylece geride kalmaz`,`Veliye kursun onun için fazla ileri düzeyde olduğunu söylersiniz`,`İmlecinizi görünür tutarak yavaş yavaş, adım adım gösterir, kısa bir beceri ısınması ekler ve veliden kurulumu kontrol etmesini istersiniz`], correct:2, fb:`Zayıf bilgisayar becerileri 1. dersten itibaren geliştirilebilir. Onun yerine yapmak, yapamadığını doğrular; kursun «fazla ileri düzeyde» olduğunu söylemek ise karar vermeniz gereken bir şey değildir.`},
+   {type:'sort', prompt:'Bu işle kim ilgilenir?', card:`Bir öğrencinin bilgisayarı, diğer programlar kapatıldıktan ve wiki’deki performans kılavuzu uygulandıktan sonra bile Blender’ı hiç çalıştıramıyor.`, zones:[{label:'✅ Kendim halledebilirim', fb:'Tam olarak değil. Sizin payınıza düşeni zaten yaptınız. Bilgisayar kurs gereksinimlerini karşılamıyorsa, öğrencinin nasıl devam edeceğine karar vermek size ait değildir.'},{label:'🧭 Takım Liderimin devreye girmesi gerekir', fb:'Doğru! Takım Liderinize haber verin: öğrencinin nasıl devam edeceğine Eğitim ve Satış ekipleri karar verir. Aileden asla bilgisayar almasını istemeyin veya kurs değişikliği sözü vermeyin.'}], correctZone:1}
   ]
  }
 },
@@ -324,7 +372,12 @@ const CONTENT = {
      'Kurs veya seviye değişikliği ya da ek ders asla vaat etmiyorum — BO’da öneriyor ve “ekibime soracağım” diyorum',
      'Kursu savunmuyor ya da “ileride daha güzel olacak” demiyorum — önce dinliyor, sonra uyarlıyorum',
      'Bir veli kursun beklediği gibi olmadığını söylediğinde, mesajı aldığımı belirtiyor, cevap vermeden önce konuyu Takım Liderime ve Müşteri Hizmetleri’ne iletiyor ve sözlerini BO’ya kaydediyorum',
-     'Öğrencinin kendi fikrinin derste yer bulduğu anı kutluyor ve çalışmasını grupla paylaşıyorum'
+     'Öğrencinin kendi fikrinin derste yer bulduğu anı kutluyor ve çalışmasını grupla paylaşıyorum',
+     'İlk derslerde yol haritasını gösteririm: öğrencilerin neler oluşturacağı, ne kadarının kodlama ne kadarının tasarım olduğu ve kurs kullanıyorsa yapay zekâ araçlarının nasıl kullanıldığı',
+     '1–2. derslerden sonra veliye kurs programına dayalı kısa bir yol haritası mesajı gönderirim — kursun içermediği projeleri veya sonuçları asla vaat etmem',
+     'Bir öğrenci bilgisayar kullanmayı hâlâ öğreniyorsa imlecimi görünür tutarak yavaş gösteririm, her seferinde bir adım veririm ve kısa bir beceri ısınması eklerim',
+     'Velilerden kurulumda yardım etmesini isterim (Chrome, kurs araçları, oturum açma) — görevlerde değil',
+     'Bilgisayar yavaşsa öğrencinin diğer programları kapatmasına yardım eder ve wiki’deki Blender performans kılavuzlarını kullanırım; kursu çalıştıramıyorsa Takım Liderime haber veririm'
    ])}
   `},
   {t:'', html:`

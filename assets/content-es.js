@@ -22,7 +22,7 @@ const CONTENT = {
     heroEyebrow:"🎯 Mini-entrenamiento",
     heroTitle:"Cerrar la brecha de <span class=\"h-pill\">expectativas</span>",
     heroIntro:"Has recibido este entrenamiento porque tienes estudiantes que han solicitado un reembolso porque el curso no cumplió sus expectativas, no era lo que querían o no les gusta su contenido. Aquí te mostraremos qué puedes hacer como tutor y cómo manejar estas situaciones.",
-    heroWork:"Completa 4 módulos cortos. Cada comprobación de módulo requiere un 70 % o más para desbloquear el siguiente. En total, unos 20–25 minutos.",
+    heroWork:"Completa 4 módulos cortos. Necesitas obtener al menos un 70 % en la evaluación de cada módulo para desbloquear el siguiente. Duración total aproximada: 30–35 minutos.",
     startBtn:"🚀 Comenzar el entrenamiento",
     pathLabel:'Tu ruta de aprendizaje',
     devTitle:'Dev: desbloquear todos los módulos para revisión',
@@ -135,8 +135,8 @@ const CONTENT = {
 },
 {id:'spot', numLabel:'Módulo 1', emoji:'🔎', color:'var(--coral)',
  title:'Detecta la brecha a tiempo — y repórtala el mismo día',
- desc:'Las tres formas que toma un desajuste, un diagnóstico rápido para las primeras clases, un semáforo para cada clase y cómo reportarlo en BO.',
- obj:'Reconocer qué tipo de desajuste tienes delante, hacer un diagnóstico rápido, leer las señales clase a clase y reportar el caso en BO el mismo día.',
+ desc:'Las tres formas que puede tomar un desajuste, un diagnóstico rápido para las primeras clases, cómo mostrar la ruta del curso al estudiante y a los padres, una revisión tipo semáforo para cada clase y cómo reportarlo en BO.',
+ obj:'Reconocer qué tipo de desajuste estás observando, realizar un diagnóstico rápido, explicar desde el inicio la ruta del curso (qué construirán, programación frente a diseño y cómo se utilizan las herramientas de IA), interpretar las señales clase por clase y reportar el caso en BO el mismo día.',
  sections:[
   {t:'🧭 Las tres formas de un desajuste', html:`
    <div class="card"><p>«No me gusta este curso» puede significar tres cosas distintas — y cada una necesita una acción un poco diferente. Aprende a distinguirlas.</p></div>
@@ -153,6 +153,34 @@ const CONTENT = {
    ${stepIconBlock('⚖️','«¿Qué parte de hoy te resultó fácil y cuál difícil?»', `<p>Pregúntalo después del primer ejercicio. Te permite calibrar lo cómodo que se siente realmente con el nivel.</p><p>✅ <strong>Lo ideal:</strong> «la primera parte fue fácil, la segunda difícil» — el nivel es el adecuado.<br>⚠️ <strong>Presta atención a:</strong> «todo fue fácil» o «no entendí nada».</p>`)}
    ${stepIconBlock('✏️','Un ejercicio corto individual (5–8 minutos)', `<p>Pide al estudiante que haga el primer ejercicio del módulo por su cuenta, sin ayuda. Fíjate en cuánto tarda y en si es capaz de empezar.</p><p>✅ <strong>Normal:</strong> necesita algo de orientación y tarda el tiempo esperado.<br>⚠️ <strong>Presta atención a:</strong> termina al instante, o no puede empezar solo.</p>`)}
    ${co('co-idea','💡',`<p><strong>¿Ya pasaste la clase 2?</strong> Haz las mismas preguntas esta semana. El diagnóstico funciona en cualquier momento del curso — cuanto antes preguntes, más opciones siguen abiertas.</p>`)}
+  `},
+  {t:'🗺️ Muestra la ruta del curso: al estudiante y a los padres', html:`
+   <div class="card"><p>Muchos casos de «esto no es lo que esperábamos» comienzan con una imagen que la familia se formó antes de conocerte: en la conversación con ventas, en la clase de prueba o en un anuncio. Tus primeras clases son la primera oportunidad para mostrar <strong>el curso real</strong>: hacia dónde avanza, qué crearán y cómo funciona. Una familia que conoce el recorrido tiene muchas menos probabilidades de sorprenderse más adelante.</p></div>
+   ${patternCards([
+     {ic:'🏗️', title:'Qué construirán', desc:'El proyecto final y lo que crean a lo largo del camino, módulo por módulo.', note:'<em>«Al final de este módulo tendrás…»</em> da una razón para avanzar con los conceptos básicos.'},
+     {ic:'⚖️', title:'Programación, diseño o ambos', desc:'Qué parte del curso consiste en escribir código y cuál en dibujar, diseñar o construir de forma visual.', note:'Sé transparente sobre el equilibrio. Un niño que espera dibujar en un curso de programación necesita saberlo desde el principio.'},
+     {ic:'🤖', title:'Cómo se utilizan las herramientas de IA', desc:'Si el curso utiliza herramientas de IA: para qué sirven y qué sigue haciendo el estudiante por sí mismo.', note:'Explícalo tal como lo describe el programa del curso, ni más ni menos.'}
+   ],3)}
+   ${co('co-idea','📘',`<p><strong>Dónde encontrarlo:</strong> el programa del curso y los manuales de las clases en BO muestran los módulos, los proyectos y las herramientas. Revísalos antes de la clase 1. ¿No estás seguro de cómo utiliza la IA el curso o qué parte es programación? Pregunta en el canal de ayuda para tutores o a tu Team Leader; nunca adivines frente a una familia.</p>`)}
+   ${dimTabs([
+     {ic:'🧒', title:'Con el estudiante',
+      intro:'Muestra, no enumeres. Un ejemplo terminado dice más que un temario.',
+      tips:[
+       {ic:'🎬', html:`<strong>Muestra un ejemplo terminado</strong> de lo que se construye en el curso durante la primera clase: <em>«Esto es lo que podrás crear».</em>`},
+       {ic:'🧭', html:`<strong>Marca la ruta:</strong> al comenzar cada módulo, explica qué aporta al proyecto final.`},
+       {ic:'🔗', html:`<strong>Conecta los conceptos básicos con la meta:</strong> <em>«El bucle de hoy es lo que hará que tu personaje se mueva solo más adelante».</em>`},
+       {ic:'🤖', html:`<strong>Si se utilizan herramientas de IA,</strong> explica en qué ayudan y qué sigue siendo trabajo propio del estudiante.`}
+      ]},
+     {ic:'👪', title:'Con los padres',
+      intro:'Un mensaje breve después de la primera clase evita la mayoría de las sorpresas.',
+      tips:[
+       {ic:'📨', html:`<strong>Envíalo después de las clases 1–2:</strong> qué se construye en el curso, qué abordan los primeros módulos y cuál es el equilibrio entre programación y diseño.`},
+       {ic:'🗓️', html:`<strong>Explica cómo serán las primeras semanas:</strong> primero los conceptos básicos y después los proyectos más grandes.`},
+       {ic:'🙋', html:`<strong>Invita a hacer preguntas</strong> sobre el contenido y, si esperaban algo diferente, repórtalo en BO el mismo día.`},
+       {ic:'🚫', html:`<strong>No exageres.</strong> Nunca describas proyectos, herramientas ni resultados que el curso no incluye.`}
+      ]}
+   ],'✅ Eso es todo en cuanto al estudiante y a los padres.')}
+   ${co('co-cute','😟',`<p><strong>Si un padre está molesto porque la actividad de un módulo o una clase no es lo que esperaba.</strong> Primero, escucha. Después, explícale qué se abordará en los siguientes módulos (consulta el programa del curso) y aclara que la historia o la temática de las actividades se puede adaptar a los intereses de su hijo, pero las herramientas y los conocimientos que aprenderá seguirán siendo los mismos. En los cursos que utilizan varias herramientas, ofrece la posibilidad de trabajar con otro programa para realizar la misma actividad; la wiki y las notas para tutores incluyen alternativas para muchas de ellas. Si la familia solicita algo que no está incluido en el curso, repórtalo en BO e informa a tu Team Leader. Nunca prometas cambiar el curso.</p>`)}
   `},
   {t:'🚥 Sigue leyéndolo en cada clase', html:`
    <div class="card"><p>Después de las primeras clases, un semáforo sencillo al terminar cada clase te mantiene atento. Lleva treinta segundos.</p></div>
@@ -196,8 +224,6 @@ const CONTENT = {
      ['Comparte lo que notas sobre su aprendizaje: <em>«Se le ilumina la cara cuando dibuja personajes — lo estoy incorporando a nuestras clases.»</em>','Di que lo has compartido con tu equipo y que les darás respuesta','Pregunta qué les gustaría que su hijo sacara del curso','Agradéceles que te lo hayan contado — con calidez, y el mismo día'],
      ['Sugerir tú mismo otro curso, un cambio de nivel o un reembolso','Defender el curso: <em>«más adelante mejora»</em>','Prometer una clase o un cambio','Decir <em>«no le gustó este curso»</em> — suena a fracaso']
    )}
-   <div class="card" style="background:var(--surface2)"><h4>📨 Cuando tu Team Leader confirme una recomendación — preséntala como una oportunidad</h4>
-   <p style="font-size:13.5px;line-height:1.75"><em>«Hola, [nombre del padre o la madre], soy [tu nombre], tutor de [estudiante]. He notado que [estudiante] tiene mucho potencial, pero en las primeras clases sentí que el enfoque de este curso no es exactamente lo que tenía en mente — [p. ej. comentó que le gustaría crear videojuegos, no solo programar]. Quiero que [estudiante] disfrute y aproveche al máximo su tiempo en Kodland, así que, junto con nuestro equipo, nos gustaría ver si [otro curso] podría encajarle mejor. ¿Tendría unos minutos esta semana para contarle más?»</em></p></div>
    ${co('co-idea','💡',`<p><strong>Di</strong> «encontramos algo que podría gustarle todavía más» — <strong>nunca</strong> «no le gustó este curso».</p>`)}
   `}
  ],
@@ -208,6 +234,7 @@ const CONTENT = {
    {type:'sort', prompt:'¿Qué forma de desajuste es esta?', card:`«Pensé que íbamos a hacer videojuegos, no solo escribir código.»`, zones:[{label:'🎯 No es a lo que vine', fb:'Correcto — la expectativa era distinta al curso. La flexibilidad puede acortar parte de la distancia, y un reporte mantiene abiertas otras opciones.'},{label:'😒 No le gusta el contenido', fb:'No exactamente — este estudiante esperaba hacer algo concreto. Eso es una brecha de «no es a lo que vine».'},{label:'⚖️ El nivel no encaja', fb:'No exactamente — aquí nada tiene que ver con la dificultad. Se trata de lo que esperaba crear.'}], correctZone:0},
    {type:'sort', prompt:'¿Qué forma de desajuste es esta?', card:`«Todo fue facilísimo — esto ya lo sé.»`, zones:[{label:'🎯 No es a lo que vine', fb:'No exactamente — este estudiante habla de la dificultad, no del tema.'},{label:'😒 No le gusta el contenido', fb:'No exactamente — el problema es el nivel, aunque suene a aburrimiento con el contenido.'},{label:'⚖️ El nivel no encaja', fb:'Correcto — parece que no le gusta, pero es el nivel. Adapta ahora y señálalo para una clase de nivelación.'}], correctZone:2},
    {type:'sort', prompt:'¿Qué forma de desajuste es esta?', card:`En cada clase hace los ejercicios solo porque toca, responde «no sé» y pide terminar antes.`, zones:[{label:'🎯 No es a lo que vine', fb:'No exactamente — no ha dicho qué esperaba. El patrón habla de poco interés por el propio contenido.'},{label:'😒 No le gusta el contenido', fb:'Correcto — el contenido, o la forma de plantearlo, no le dice nada. Ofrécele opciones dentro del objetivo y repórtalo.'},{label:'⚖️ El nivel no encaja', fb:'No exactamente — nada indica un problema de dificultad; la señal es el poco interés.'}], correctZone:1},
+   {type:'choice', prompt:`Después de la clase 1, un padre pregunta: «¿Qué es exactamente lo que creará mi hijo en este curso?». ¿Qué haces?`, opts:[`Decirle que el curso se vuelve más divertido más adelante y que ya lo verá`,`Describir el proyecto final y los primeros módulos según el programa del curso, explicar con honestidad qué parte es programación y qué parte es diseño, e invitar a hacer más preguntas`,`Prometerle que al final podrá crear cualquier videojuego que quiera`], correct:1, fb:`La ruta del curso proviene del programa del curso: qué construirán, el recorrido y el equilibrio real entre programación y diseño. Las respuestas vagas y las grandes promesas son la forma en que comienza el «esto no es lo que esperábamos».`},
    {type:'choice', prompt:`En el diagnóstico preguntas «¿Qué esperabas aprender?» y el estudiante responde: «A dibujar anime — no esto.» ¿Cuál es el mejor siguiente paso?`, opts:[`Explicarle que el anime llega más adelante en el curso y seguir exactamente como estaba previsto`,`Llevar su interés a la clase de hoy donde puedas, y reportarlo en BO el mismo día`,`Esperar dos clases más a ver si se le pasa`], correct:1, fb:`Adapta enseguida lo que puedas en la clase, y repórtalo el mismo día para que el equipo conserve todas sus opciones. Esperar, o defender el plan, gasta el margen que tienes.`},
    {type:'sort', prompt:'¿En qué color del semáforo está esta situación?', card:`Dos clases seguidas: respuestas de una sola palabra y pide terminar antes.`, zones:[{label:'🟢 Verde', fb:'No exactamente — dos clases con respuestas de una palabra y ganas de irse antes no es «todo bien».'},{label:'🟡 Amarillo', fb:'Correcto — anótalo, prueba un cambio flexible y avisa a tu Team Leader esa misma semana. No esperes al rojo.'},{label:'🔴 Rojo', fb:'Todavía no — rojo significa negarse, decir abiertamente que no le gusta o que los padres escriban. Pero amarillo dos veces seguidas ya significa: avisa a tu Team Leader esta semana.'}], correctZone:1},
   ]
@@ -215,8 +242,8 @@ const CONTENT = {
 },
 {id:'flex', numLabel:'Módulo 2', emoji:'🎛️', color:'var(--coral)',
  title:'Haz que el curso encaje con el estudiante — flexibilidad sin perder el objetivo',
- desc:'Cómo adaptar una clase a lo que el estudiante realmente quiere aprender sin perder el objetivo de aprendizaje, cómo ofrecer opciones según la edad y cuándo debe intervenir tu Team Leader.',
- obj:'Adaptar una clase a los intereses del estudiante manteniendo el objetivo de aprendizaje, ofrecer opciones adecuadas a su edad y saber cuándo la flexibilidad no basta y debe intervenir tu Team Leader.',
+ desc:'Cómo adaptar una clase a lo que el estudiante realmente quiere aprender sin perder el objetivo de aprendizaje, cómo ofrecer opciones según la edad, cuándo debe intervenir tu Team Leader y cómo apoyar a los estudiantes que todavía están aprendiendo a usar la computadora.',
+ obj:'Adaptar una clase a los intereses del estudiante manteniendo el objetivo de aprendizaje, ofrecer opciones adecuadas a su edad, saber cuándo la flexibilidad no es suficiente y debe intervenir tu Team Leader, y apoyar desde el primer módulo a los estudiantes con pocas habilidades informáticas.',
  sections:[
   {t:'🎯 La regla: mantén el objetivo, flexibiliza el camino', html:`
    <div class="card"><p>No tienes que elegir entre «seguir el manual» y «dejar que hagan lo que quieran». El manual te dice <strong>para qué</strong> sirve la clase. Casi todo lo demás se puede adaptar.</p></div>
@@ -283,6 +310,25 @@ const CONTENT = {
      ['Pregúntale qué le gustaría crear al inicio de la próxima clase','Muestra su trabajo al grupo','Celebra el momento en que su idea aparece en la clase'],
      ['Decir <em>«eso no está en el plan»</em>','Defender el curso en lugar de escuchar','Dejar que «su idea» sustituya el objetivo de la clase']
    )}
+  `},
+  {t:'⌨️ Cuando la computadora es la parte difícil', html:`
+   <div class="card"><p>A veces, «demasiado difícil» no tiene nada que ver con el contenido del curso. El estudiante todavía está aprendiendo a usar la computadora: encontrar las teclas, arrastrar, copiar, cambiar de ventana. Entonces, cada actividad se convierte en dos al mismo tiempo, y durante el primer módulo eso puede hacer que un niño, o sus padres, decidan que el curso «no es para ellos». Es algo en lo que puedes trabajar desde la clase 1.</p></div>
+   ${symCards([
+     {ic:'🔍', title:'Señales a las que debes prestar atención', sub:'En las primeras clases',
+      see:`Busca cada tecla en el teclado · no puede arrastrar, hacer clic derecho, copiar ni pegar · se pierde al cambiar entre ventanas o pestañas · duda en compartir su pantalla · entiende la idea, pero nunca termina por el <em>cómo</em>.`,
+      tip:`Con frecuencia parece lentitud o falta de interés. Pídele que comparta su pantalla y observa <em>cómo</em> trabaja, no solamente <em>lo que</em> produce.`},
+     {ic:'🧑‍🏫', title:'Lo que haces en la clase',
+      do:`<ul><li><strong>Modela despacio, con tu cursor visible,</strong> y narra cada clic: <em>«arriba a la izquierda, el botón verde».</em> Haz zoom cuando compartas pantalla.</li><li><strong>Un paso y luego verifica:</strong> <em>«Muéstrame tu pantalla: ¿en qué punto estás ahora?».</em></li><li><strong>Un calentamiento de dos minutos sobre habilidades básicas</strong> durante el primer módulo: copiar y pegar, arrastrar, guardar y cambiar de ventana.</li><li><strong>Una lista de atajos en el chat:</strong> Ctrl+C, Ctrl+V, Ctrl+Z, Ctrl+S, Alt+Tab (Cmd en Mac).</li><li><strong>Reconoce también las habilidades informáticas:</strong> <em>«¡Guardaste tu proyecto tú solo!».</em></li></ul>`,
+      avoid:`Tomar el control de su pantalla o hacer la actividad por él: eso resuelve el problema por hoy y confirma que no puede hacerlo.`},
+     {ic:'👪', title:'Involucra a los padres en la configuración',
+      do:`Antes de la clase 1, o en cuanto lo notes: pide a la familia que verifique que Chrome esté instalado y actualizado, que las herramientas del curso estén instaladas si el curso las necesita y que la sesión esté guardada. Con los más pequeños, tener a uno de los padres cerca durante las primeras clases ayuda con la configuración, no con las actividades.`},
+     {ic:'🐢', title:'Cuando la computadora es lenta',
+      do:`<ul><li><strong>Cierra otros programas y pestañas</strong> antes de la clase y utiliza Google Chrome.</li><li><strong>¿Blender funciona lento?</strong> La wiki incluye guías para configurar Blender y mejorar su rendimiento: úsalas para ayudar al estudiante a configurarlo. Además, el curso incluye una guía de rendimiento en sus primeras clases.</li><li><strong>Si la computadora no cumple en absoluto con los requisitos del curso,</strong> informa a tu Team Leader: los equipos de Teaching y Sales deciden cómo continuará el estudiante.</li></ul>`,
+      avoid:`Pedirle a la familia que compre una computadora nueva o prometer un cambio de curso.`},
+     {ic:'📝', title:'Cuando es más de lo que puedes resolver dentro del grupo',
+      do:`Deja un comentario en BO con lo que observaste y lo que intentaste, e informa a tu Team Leader. Puedes solicitar una clase adicional para practicar los conceptos básicos; tu Team Leader decide.`,
+      avoid:`Ofrecer una clase adicional a la familia antes de que sea aprobada.`}
+   ])}
   `}
  ],
  ix:{
@@ -296,7 +342,9 @@ const CONTENT = {
    {type:'choice', prompt:`Un niño de 7 años te dice que las clases son aburridas. ¿Qué propuesta encaja mejor?`, opts:[`«Diseñemos juntos todo el proyecto — ¿cuál es tu encargo en cinco puntos?»`,`«¿Qué quieres que sea tu personaje — un dragón, un robot o un gato?» y usar ese personaje en la tarea de hoy`,`«Así funciona el curso — más adelante te gustará.»`], correct:1, fb:`Los más pequeños eligen mejor entre dos o tres opciones concretas y divertidas. Un encargo abierto es para estudiantes mayores, y «más adelante te gustará» defiende el curso en lugar de escuchar.`},
    {type:'choice', prompt:`¿Qué significa «mantén el objetivo, flexibiliza el camino»?`, opts:[`Saltarse las tareas que no le gustan al estudiante`,`Seguir solo los intereses del estudiante`,`Cambiar la temática o la tarea, pero mantener la habilidad para la que es la clase`], correct:2, fb:`El objetivo y los resultados del manual se mantienen; la temática, el personaje, el tema y el orden se pueden adaptar.`},
    {type:'choice', prompt:`Un estudiante pregunta: «¿Puedo hacer otro curso en lugar de este?» ¿Qué le dices?`, opts:[`«Sí, yo me encargo de organizarlo.»`,`«No, ya empezaste este.»`,`«Me encanta que me lo digas. Voy a consultar con mi equipo qué podemos hacer — y mientras tanto, usemos tu idea en la clase de hoy.»`], correct:2, fb:`Ni prometer ni rechazar te corresponde — pero escuchar, usar su idea ahora e iniciar la conversación interna es exactamente tu trabajo.`},
-   {type:'sort', prompt:'¿Esto mantiene el objetivo de aprendizaje?', card:`El objetivo de la clase es la técnica de animación, así que el estudiante anima el objeto que elija.`, zones:[{label:'✅ Mantiene el objetivo', fb:'Correcto — la elección es suya y la técnica se sigue practicando.'},{label:'⛔ Pierde el objetivo', fb:'No exactamente — sigue practicando la técnica para la que es la clase.'}], correctZone:0}
+   {type:'sort', prompt:'¿Esto mantiene el objetivo de aprendizaje?', card:`El objetivo de la clase es la técnica de animación, así que el estudiante anima el objeto que elija.`, zones:[{label:'✅ Mantiene el objetivo', fb:'Correcto — la elección es suya y la técnica se sigue practicando.'},{label:'⛔ Pierde el objetivo', fb:'No exactamente — sigue practicando la técnica para la que es la clase.'}], correctZone:0},
+   {type:'choice', prompt:`En la clase 2, un niño de 7 años entiende la actividad, pero nunca la termina: busca cada tecla y no puede copiar ni pegar. ¿Qué ayuda más?`, opts:[`Tomar el control de su pantalla y hacerlo por él para que no se quede atrás`,`Decirle a su padre o madre que el curso es demasiado avanzado para él`,`Modelar despacio con tu cursor visible, paso a paso, añadir un breve calentamiento de habilidades y pedirle a su padre o madre que revise la configuración`], correct:2, fb:`Las habilidades informáticas básicas se pueden entrenar desde la clase 1. Hacerlo por él confirma que no puede; decir que el curso es «demasiado avanzado» no te corresponde decidirlo.`},
+   {type:'sort', prompt:'¿Quién se encarga de esto?', card:`La computadora de un estudiante no puede ejecutar Blender en absoluto, incluso después de cerrar otros programas y seguir la guía de rendimiento de la wiki.`, zones:[{label:'✅ Puedo hacerlo yo', fb:'No exactamente. Ya hiciste tu parte. Si la computadora no cumple con los requisitos del curso, la decisión sobre cómo continuará el estudiante no te corresponde.'},{label:'🧭 Necesita a mi Team Leader', fb:'¡Correcto! Informa a tu Team Leader: los equipos de Teaching y Sales deciden cómo continuará el estudiante. Nunca pidas a la familia que compre una computadora ni prometas un cambio de curso.'}], correctZone:1}
   ]
  }
 },
@@ -324,7 +372,12 @@ const CONTENT = {
      'Nunca prometo un cambio de curso, de nivel ni una clase extra — lo recomiendo en BO y digo «voy a consultarlo con mi equipo»',
      'No defiendo el curso ni digo que «más adelante mejora» — primero escucho, después adapto',
      'Cuando unos padres dicen que el curso no es lo que esperaban, acuso recibo, lo llevo a mi Team Leader y a Servicio al Cliente antes de responder, y registro sus palabras en BO',
-     'Celebro el momento en que la propia idea del estudiante aparece en la clase, y muestro su trabajo al grupo'
+     'Celebro el momento en que la propia idea del estudiante aparece en la clase, y muestro su trabajo al grupo',
+     'En las primeras clases, muestro la ruta del curso: qué construirán, qué parte es programación y qué parte es diseño, y cómo se utilizan las herramientas de IA si el curso las incluye',
+     'Envío a los padres un breve mensaje con la ruta del curso después de las clases 1–2, basado en el programa del curso, sin prometer nunca proyectos ni resultados que el curso no incluya',
+     'Cuando un estudiante todavía está aprendiendo a usar la computadora, modelo despacio con mi cursor visible, doy un paso a la vez y añado un breve calentamiento de habilidades',
+     'Pido a los padres que ayuden con la configuración (Chrome, las herramientas del curso y el inicio de sesión), no con las actividades',
+     'Si la computadora es lenta, ayudo al estudiante a cerrar otros programas y utilizo las guías de rendimiento de Blender de la wiki; si no puede ejecutar el curso, informo a mi Team Leader'
    ])}
   `},
   {t:'', html:`
